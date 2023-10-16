@@ -116,3 +116,8 @@ Everytime we want to create a new set of cards, we create the collection with a 
 - Add a game engine for the cards, like fighting with your Pokémon and some energy cards.
 - Implement a marketplace to exchange cards between users.
 - Implement a tournament game some promos cards for winners.
+
+## To Do List 
+
+- [] TODO
+- [x] Done 
