@@ -119,5 +119,20 @@ Everytime we want to create a new set of cards, we create the collection with a 
 
 ## To Do List 
 
-- [] TODO
-- [x] Done 
+- [ ] Onchain Part 
+  - [ ] Contract Collections 
+  - [ ] Implementation de ERC 721
+  - [ ] Implémentation de Carte
+  - [ ] Main Contract
+  - [ ] Owner able to mint
+- [ ] First offchain part 
+  - [ ] API information about an NFT -> JSON
+  - [ ] WebServer Express.js
+  - [ ] Front to visualize Cards of the user
+    - [ ] NFT user
+    - [ ] NFT information user
+  - [ ] Front to vizualise all cards of everyone
+- [ ] Integration de pokémon TCG 
+- [ ] Ouvrir des boosters 
+- [ ] Market Place 
+- [ ] Improve everything
