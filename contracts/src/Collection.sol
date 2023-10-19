@@ -21,7 +21,7 @@ contract Collection is ERC721{
 
   function getName() external view returns (string memory) {
     return collectionName;
-  } 
+  }
 
    function mintCard(string memory img) external {
         require(cards.length < cardCount, "Collection is full");

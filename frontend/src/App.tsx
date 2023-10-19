@@ -39,11 +39,20 @@ const useWallet = () => {
   }, [details, contract])
 }
 
+
 export const App = () => {
   const wallet = useWallet()
+  const createCollection = () => {
+    if(wallet){
+      wallet.contract.createCollection("pokemon",10).then((res) => {
+        console.log(res.hash)
+      } )
+    }
+  }
   return (
     <div className={styles.body}>
       <h1>Welcome to Pokémon TCG</h1>
+      <button onClick={createCollection}>Create collection</button>
     </div>
   )
 }

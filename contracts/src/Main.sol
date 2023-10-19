@@ -18,8 +18,11 @@ contract Main {
         collectionCount = 0;
     }
 
-    function createCollection(string calldata name, uint cardCount) external onlyOwner {
-        collections[collectionCount++] = new Collection(name, cardCount);
+    function createCollection(string calldata name, uint cardCount) external onlyOwner returns (address){
+      Collection coll = new Collection(name, cardCount);
+      address collAddress = address(coll);
+      collections[collectionCount++] = coll;
+      return collAddress;
     }
 
 }
