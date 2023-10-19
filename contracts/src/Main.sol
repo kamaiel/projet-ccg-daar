@@ -4,14 +4,22 @@ pragma solidity ^0.8.20;
 import "./Collection.sol";
 
 contract Main {
-  int private count;
-  mapping(int => Collection) private collections;
+    address public owner;
+    mapping(int => Collection) private collections;
+    int private collectionCount;
 
-  constructor() {
-    count = 0;
-  }
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only owner can call this function");
+        _;
+    }
 
-  function createCollection(string calldata name, uint cardCount) external {
-    collections[count++] = new Collection(name, cardCount);
-  }
+    constructor() {
+        owner = msg.sender;
+        collectionCount = 0;
+    }
+
+    function createCollection(string calldata name, uint cardCount) external onlyOwner {
+        collections[collectionCount++] = new Collection(name, cardCount);
+    }
+
 }

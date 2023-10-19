@@ -9,10 +9,10 @@ contract Collection is ERC721{
 
   struct Card {
     uint cardId;
-    string cardName;
+    string cardImg;
   }
 
-  Card[] cardList;
+  Card[] cards;
 
   constructor(string memory _collectionName, uint _cardCount) ERC721("Pokemon", "POK"){
     collectionName = _collectionName;
@@ -22,4 +22,11 @@ contract Collection is ERC721{
   function getName() external view returns (string memory) {
     return collectionName;
   } 
+
+   function mintCard(string memory img) external {
+        require(cards.length < cardCount, "Collection is full");
+        uint cardNumber = cards.length;
+        cards.push(Card(cardNumber, img));
+        _mint(msg.sender, cardNumber);
+    }
 }
