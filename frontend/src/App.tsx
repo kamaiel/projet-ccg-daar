@@ -44,8 +44,10 @@ export const App = () => {
   const wallet = useWallet()
   const createCollection = () => {
     if(wallet){
-      wallet.contract.createCollection("pokemon",10).then((res) => {
-        console.log(res.hash)
+      wallet.contract.createCollection("pokemon",10).then((res:any) => {
+        wallet.contract.getCollection(0).getName().then((res: any)=>{
+          console.log(res);
+        });
       } )
     }
   }
