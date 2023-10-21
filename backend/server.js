@@ -3,7 +3,7 @@ const axios = require('axios')
 const app = express()
 const port = 3000 
 
-const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
+/*const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
 
 
 const TestNFT = {
@@ -31,9 +31,7 @@ axios({
     cards.data.data.forEach((card) => {
         console.log(card)
     })
-})
-
-
+})*/
 
 
 app.listen(port, () => {

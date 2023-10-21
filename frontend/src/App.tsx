@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import styles from './styles.module.css'
+import { contracts } from '@/contracts.json'
 import * as ethereum from '@/lib/ethereum'
 import * as main from '@/lib/main'
+
 
 type Canceler = () => void
 const useAffect = (
@@ -43,18 +45,26 @@ const useWallet = () => {
 export const App = () => {
   const wallet = useWallet()
   const createCollection = () => {
-    if(wallet){
-      wallet.contract.createCollection("pokemon",10).then((res:any) => {
-        wallet.contract.getCollection(0).getName().then((res: any)=>{
-          console.log(res);
+    if (wallet) {
+      wallet.contract.createCollection("pokemon", 10)
+        .then((createCollectionResponse: any) => {
+          return createCollectionResponse.wait(); // Cela attend que la transaction soit confirmée
+        })
+        .then(() => {
+          return wallet.contract.getNameCollection(0);
+        })
+        .then((collectionName: any) => {
+          console.log("Nom de la collection :", collectionName);
+        })
+        .catch((error: any) => {
+          console.error("Erreur lors de la création ou de l'obtention de la collection :", error);
         });
-      } )
-    }
+      }
   }
   return (
     <div className={styles.body}>
       <h1>Welcome to Pokémon TCG</h1>
       <button onClick={createCollection}>Create collection</button>
     </div>
-  )
+    )
 }
