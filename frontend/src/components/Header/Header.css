@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    padding-top: 50px;
+}
+
+.logo, .profile, .navigation{
+    padding: 2rem;
+    height: 25px;  
+    background-color: #191919;
+    color: white;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 40px;
+}
+
+.logo img{
+    height: 50px;
+}
+
+.profile{
+    margin-right: 40px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.navigation{
+    justify-content: space-around;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.deck, .market, .pack{
+    width: 5rem;
+    padding: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: inherit;
+    background-color: red;
+    text-align: center;
+}

@@ -4,6 +4,11 @@ import { contracts } from '@/contracts.json'
 import * as ethereum from '@/lib/ethereum'
 import * as main from '@/lib/main'
 
+import "./App.css"
+
+import {Header} from './components/Header/Header'
+import {Deck} from './pages/Deck/Deck'
+
 
 type Canceler = () => void
 const useAffect = (
@@ -51,7 +56,7 @@ export const App = () => {
           return createCollectionResponse.wait(); // Cela attend que la transaction soit confirmée
         })
         .then(() => {
-          return wallet.contract.getNameCollection(0);
+          // return wallet.contract.getNameCollection(0);
         })
         .then((collectionName: any) => {
           console.log("Nom de la collection :", collectionName);
@@ -62,9 +67,13 @@ export const App = () => {
       }
   }
   return (
-    <div className={styles.body}>
-      <h1>Welcome to Pokémon TCG</h1>
-      <button onClick={createCollection}>Create collection</button>
+    <div>
+      <Header></Header>
+      <Deck></Deck>
     </div>
+    // <div className={styles.body}>
+    //   <h1>Welcome to Pokémon TCG</h1>
+    //   <button onClick={createCollection}>Create collection</button>
+    // </div>
     )
 }
