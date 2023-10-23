@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import styles from './styles.module.css'
-import { contracts } from '@/contracts.json'
 import * as ethereum from '@/lib/ethereum'
 import * as main from '@/lib/main'
 
@@ -46,6 +45,45 @@ const useWallet = () => {
   }, [details, contract])
 }
 
+const cards = [
+  {
+    id: 'sv3pt5-81',
+    name: 'Magnemite',
+    imageUrl: 'https://images.pokemontcg.io/sv3pt5/81.png'
+  },
+  {
+    id: 'sv3pt5-82',
+    name: 'Magneton',
+    imageUrl: 'https://images.pokemontcg.io/sv3pt5/82.png'
+  }
+]
+
+const mintedCardURIs : (string []) = [];
+
+function encodeURICard (cards : any){
+  for (const card of cards) {
+    const cardURI = encodeURIComponent(JSON.stringify(card))
+    mintedCardURIs.push(cardURI);
+  }
+}
+
+async function getNFTInfos (userAdress : any, contrat : any, numColl : number){
+  try {
+    const balance = await contrat.possessNFT(numColl,userAdress)
+    console.log(balance);
+    const tokenID = await contrat.getNFT(0,userAdress) 
+    
+    console.log(tokenID);
+    return tokenID;
+  }catch(error){
+    console.error("Erreur lors de la récupération des NFT possédés", error);
+    return [];
+  }
+}
+
+
+ 
+
 
 export const App = () => {
   const wallet = useWallet()
@@ -55,21 +93,42 @@ export const App = () => {
         .then((createCollectionResponse: any) => {
           return createCollectionResponse.wait(); // Cela attend que la transaction soit confirmée
         })
-        .then(() => {
-          // return wallet.contract.getNameCollection(0);
-        })
         .then((collectionName: any) => {
-          console.log("Nom de la collection :", collectionName);
+          wallet.contract.getCollection(0)
+          .then((resp: any) => {
+            console.log("Nom de la collection :", resp);
+          }).catch((error : any) => {
+            console.error("Erreur ici pour test")
+          });
         })
         .catch((error: any) => {
           console.error("Erreur lors de la création ou de l'obtention de la collection :", error);
         });
       }
   }
+
+  const mintCards = () => {
+    encodeURICard(cards)
+    wallet?.contract.mintCards(0,wallet?.details.account,mintedCardURIs)
+            .then((result: any) => {
+              console.log(result);
+            })
+            .catch((error: any)=> {
+              console.error("Erreur lors de l'appel à la fonction getCollection :", error);
+            });
+  }
+
+  const getCards = () => {
+    getNFTInfos(wallet?.details.account, wallet?.contract, 0)
+  }
   return (
+
     <div>
       {/* <Header></Header> */}
-      <Deck></Deck> 
+      <button onClick={createCollection}>Create collection</button>
+      <button onClick={mintCards}> Mint Card </button>
+      <button onClick={getCards}> Mes cartes</button>
+      <Deck></Deck>  
     </div>
     // <div className={styles.body}>
     //   <h1>Welcome to Pokémon TCG</h1>
