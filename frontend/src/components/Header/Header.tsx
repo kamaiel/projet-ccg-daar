@@ -5,18 +5,18 @@ export const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-                <img src="../public/pokemon-logo.png" alt="logo pokemon" />
+                <img src="/pokemon-logo.png" alt="logo pokemon" />
             </div>
             <div className="navigation">
-                <div className="deck">
+                <button className="deck">
                     DECK
-                </div>
-                <div className="market">
+                </button>
+                <button className="market">
                     MARKET
-                </div>
-                <div className="pack">
+                </button>
+                <button className="pack">
                     PACK 
-                </div>
+                </button>
             </div>
             <div className="profile">
                 PROFILE

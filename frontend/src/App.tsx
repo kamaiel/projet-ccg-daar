@@ -68,8 +68,8 @@ export const App = () => {
   }
   return (
     <div>
-      <Header></Header>
-      <Deck></Deck>
+      {/* <Header></Header> */}
+      <Deck></Deck> 
     </div>
     // <div className={styles.body}>
     //   <h1>Welcome to Pokémon TCG</h1>
