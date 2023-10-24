@@ -35,8 +35,9 @@ axios({
 })
 
 app.get('/id', (req,res) => {
-    const id = req.body.id
+    const id = req.query
     console.log(id)
+    res.json(id)
 })
 
 
