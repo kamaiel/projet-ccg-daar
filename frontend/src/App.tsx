@@ -62,7 +62,7 @@ const mintedCardURIs : (string []) = [];
 
 function encodeURICard (cards : any){
   for (const card of cards) {
-    const cardURI = encodeURIComponent(JSON.stringify(card))
+    const cardURI = JSON.stringify(card.id)
     mintedCardURIs.push(cardURI);
   }
 }
@@ -118,8 +118,17 @@ export const App = () => {
             });
   }
 
-  const getCards = () => {
-    getNFTInfos(wallet?.details.account, wallet?.contract, 0)
+  const getCards = async () => {
+    const myCardsId = await getNFTInfos(wallet?.details.account, wallet?.contract, 0)
+    const myCardsInfo = []
+    for (const cardId of myCardsId) {
+      const info = await fetch("http://localhost:3000/id",{
+        method: "GET",
+        query: JSON.stringify(cardId), // le type utilisé pour le corps doit correspondre à l'en-tête "Content-Type"
+      });
+
+      myCardsId.push(info.json());
+    }
   }
   return (
 

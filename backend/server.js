@@ -3,10 +3,10 @@ const axios = require('axios')
 const app = express()
 const port = 3000 
 
-/*const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
+const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
 
 
-const TestNFT = {
+/* const TestNFT = {
     NFT_card : "testNFT",
     img_link : ""
 }
@@ -14,6 +14,9 @@ const TestNFT = {
 app.get('/nft', (req,res) => {
     res.json(TestNFT)
 });
+ */
+
+const collect1 = {}
 
 axios({
     method : 'get', 
@@ -28,10 +31,13 @@ axios({
     }
 
 }).then((cards) => {
-    cards.data.data.forEach((card) => {
-        console.log(card)
-    })
-})*/
+    const collect1 = cards.data.data
+})
+
+app.get('/id', (req,res) => {
+    const id = req.body.id
+    console.log(id)
+})
 
 
 app.listen(port, () => {
