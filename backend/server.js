@@ -1,6 +1,7 @@
 const express = require('express')
 const axios = require('axios')
 const app = express()
+const cors = require('cors')
 const port = 3000 
 
 const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
@@ -15,6 +16,9 @@ app.get('/nft', (req,res) => {
     res.json(TestNFT)
 });
  */
+
+
+app.use(cors())
 
 const collect1 = {}
 

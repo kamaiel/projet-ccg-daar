@@ -70,10 +70,7 @@ function encodeURICard (cards : any){
 async function getNFTInfos (userAdress : any, contrat : any, numColl : number){
   try {
     const balance = await contrat.possessNFT(numColl,userAdress)
-    console.log(balance);
     const tokenID = await contrat.getNFT(0,userAdress) 
-    
-    console.log(tokenID);
     return tokenID;
   }catch(error){
     console.error("Erreur lors de la récupération des NFT possédés", error);
@@ -120,15 +117,15 @@ export const App = () => {
 
   const getCards = async () => {
     const myCardsId = await getNFTInfos(wallet?.details.account, wallet?.contract, 0)
+    console.log(myCardsId);
     const myCardsInfo = []
-    for (const cardId of myCardsId) {
-      const info = await fetch("http://localhost:3000/id",{
+    for (var i = 0 ; i < myCardsId.length ; i++){
+      const info = await fetch(`http://localhost:3000/id?id=${myCardsId[i]}`,{
         method: "GET",
-        query: JSON.stringify(cardId), // le type utilisé pour le corps doit correspondre à l'en-tête "Content-Type"
       });
 
-      myCardsId.push(info.json());
-    }
+      myCardsInfo.push(info.json());
+    }     
   }
   return (
 
