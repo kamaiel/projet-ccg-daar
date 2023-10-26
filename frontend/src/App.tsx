@@ -7,6 +7,7 @@ import "./App.css"
 
 import {Header} from './components/Header/Header'
 import {Deck} from './pages/Deck/Deck'
+import {CollectionCard} from './components/CollectionCard/CollectionCard'
 
 
 type Canceler = () => void
@@ -84,25 +85,6 @@ async function getNFTInfos (userAdress : any, contrat : any, numColl : number){
 
 export const App = () => {
   const wallet = useWallet()
-  const createCollection = () => {
-    if (wallet) {
-      wallet.contract.createCollection("pokemon", 10)
-        .then((createCollectionResponse: any) => {
-          return createCollectionResponse.wait(); // Cela attend que la transaction soit confirmée
-        })
-        .then((collectionName: any) => {
-          wallet.contract.getCollection(0)
-          .then((resp: any) => {
-            console.log("Nom de la collection :", resp);
-          }).catch((error : any) => {
-            console.error("Erreur ici pour test")
-          });
-        })
-        .catch((error: any) => {
-          console.error("Erreur lors de la création ou de l'obtention de la collection :", error);
-        });
-      }
-  }
 
   const mintCards = () => {
     encodeURICard(cards)
@@ -127,14 +109,24 @@ export const App = () => {
       myCardsInfo.push(info.json());
     }     
   }
+
+  const getCollectionsName =  () : (string []) => {
+    return wallet?.contract.getAllCollectionsName().then((result: any) => {return result});
+  }
+
   return (
 
     <div>
       {/* <Header></Header> */}
-      <button onClick={createCollection}>Create collection</button>
       <button onClick={mintCards}> Mint Card </button>
       <button onClick={getCards}> Mes cartes</button>
-      <Deck></Deck>  
+      <button onClick={getCollectionsName}> Get Collections Name</button>
+      {/* getCollection().forEach((name) => {}) */}
+        {/* <CollectionCard collName={name}></CollectionCard> */}
+
+      
+      {/* <Deck></Deck>   */}
+
     </div>
     // <div className={styles.body}>
     //   <h1>Welcome to Pokémon TCG</h1>

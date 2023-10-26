@@ -61,4 +61,12 @@ contract Main {
       return collectionCount;
     }
 
+    function getAllCollectionsName() public view returns (string[] memory) {
+      string[] memory names = new string[](uint(collectionCount));
+      for (uint i = 0; i < uint(collectionCount); i++) {
+        names[i] = collections[int(i)].name();
+      }
+      return names;
+    }
+
 }
