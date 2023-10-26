@@ -7,11 +7,17 @@ const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
 
 /* ---------------------------------------------------------------------- */
 
-const { Web3 } = require('web3')
+const ethers = require('ethers')
+/*const { Web3 } = require('web3')
 const provider = 'http://127.0.0.1:8545'
-const web3 = new Web3(provider)
+const web3 = new Web3(provider)*/
 const ABI = require('../contracts/artifacts/src/Main.sol/Main.json')
 const abi = ABI.abi
+
+const bytecodeabi = ABI.bytecode
+
+var super_admin = null
+var MainContract = null
 
 /* ---------------------------------------------------------------------- */
 
@@ -54,22 +60,35 @@ const adress_collec1 = {}*/
 
 /* -------------------- Appels Blockchain ----------------------- */
 
-async function deployContract () {
-
+async function deployContract() {
+    const provider = new ethers.JsonRpcProvider('http://127.0.0.1:8545'); 
+    const signer = await provider.getSigner(); 
+  
     try {
-        const accounts = await web3.eth.getAccounts();
-        const super_admin = accounts[0];
-        const MainContract = new web3.eth.Contract(abi,super_admin)
+      const factory = new ethers.ContractFactory(abi, bytecodeabi, signer);
+      const contract = await factory.deploy();
+      console.log(contract)
+      await contract.deployTransaction();
+  
+      console.log('Contrat déployé avec succès à l\'adresse :', contract.address);
+  
+     
+  
+    } catch (error) {
+      console.error('Erreur lors du déploiement du contrat :', error);
+    }
+  }
 
-       for(var i = 0 ; i < 6 ; i ++){
-        await MainContract.methods.createCollection(metaDataSet.data[i].name,metaDataSet.data[i].total)
-       }
-       const num = await MainContract.methods.getAllCollectionsName()
-       console.log(num)
-
+async function creationCollection (){
+    try {
+        for(var i = 0 ; i < 6 ; i ++){
+            const toSign = await MainContract.methods.createCollection(metaDataSet.data[i].name,Number(metaDataSet.data[i].total)).call()
+            
+           }
+        console.log("Collection creation was created with sucess")
     }catch(error){
-        console.log("Error when deploying contract Main with collection", error)
-    }  
+        console.log("Error with collection creation\n", error)
+    }
 }
 
 /* ---------------------------------------------------------------------- */
@@ -81,7 +100,8 @@ app.get('/id', (req,res) => {
 })
 
 
-app.listen(port, () => {
+app.listen(port, async () => {
     console.log(`Server running on port ${port}`)
-    deployContract()
+    await deployContract()
+    creationCollection()
 })

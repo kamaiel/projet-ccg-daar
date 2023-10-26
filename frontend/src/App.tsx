@@ -7,7 +7,7 @@ import "./App.css"
 
 import {Header} from './components/Header/Header'
 import {Deck} from './pages/Deck/Deck'
-import {CollectionCard} from './components/CollectionCard/CollectionCard'
+//simport {CollectionCard} from './components/CollectionCard/CollectionCard'
 
 
 type Canceler = () => void
@@ -111,7 +111,7 @@ export const App = () => {
   }
 
   const getCollectionsName =  () : (string []) => {
-    return wallet?.contract.getAllCollectionsName().then((result: any) => {return result});
+    return wallet?.contract.getAllCollectionsName().then((result: any) => {console.log(result) ; return result});
   }
 
   return (
