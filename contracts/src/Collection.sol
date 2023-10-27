@@ -37,6 +37,10 @@ contract Collection is ERC721URIStorage{
         return resp;
     }
 
+    function getName() public view returns (string memory){
+        return collectionName;
+    }
+
 
 
 

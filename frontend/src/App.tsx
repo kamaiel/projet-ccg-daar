@@ -7,6 +7,7 @@ import "./App.css"
 
 import {Header} from './components/Header/Header'
 import {Deck} from './pages/Deck/Deck'
+import {Accueil} from './pages/Accueil/Accueil'
 //simport {CollectionCard} from './components/CollectionCard/CollectionCard'
 
 
@@ -111,26 +112,17 @@ export const App = () => {
   }
 
   const getCollectionsName =  () : (string []) => {
+    console.log(wallet?.contract.address)
     return wallet?.contract.getAllCollectionsName().then((result: any) => {console.log(result) ; return result});
   }
 
   return (
 
     <div>
-      {/* <Header></Header> */}
       <button onClick={mintCards}> Mint Card </button>
       <button onClick={getCards}> Mes cartes</button>
       <button onClick={getCollectionsName}> Get Collections Name</button>
-      {/* getCollection().forEach((name) => {}) */}
-        {/* <CollectionCard collName={name}></CollectionCard> */}
-
-      
-      {/* <Deck></Deck>   */}
-
+      <Accueil wallet={wallet} />
     </div>
-    // <div className={styles.body}>
-    //   <h1>Welcome to Pokémon TCG</h1>
-    //   <button onClick={createCollection}>Create collection</button>
-    // </div>
     )
 }
