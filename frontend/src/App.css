@@ -4,9 +4,8 @@
   }
   
 html, body {
-  background-color:hsl(220, 7%, 24%);
+  background-color:hsl(220, 35%, 14%);
 margin: 0 !important;
 padding: 0 !important;
-overflow: hidden;
 font-family: 'Roboto', sans-serif;
 }

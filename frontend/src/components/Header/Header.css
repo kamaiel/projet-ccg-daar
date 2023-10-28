@@ -1,61 +1,103 @@
 .header{
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    position: fixed;
-    background-color: transparent;
-    width: 98%;
+    position : relative;
+    box-shadow: none;
+    display : flex;
+    background-color: #161b22;
+    height : 64px;
+    align-items: center;
 }
 
-.logo, .profile, .navigation{
-    padding: 2rem;
-    height: 25px;  
-    background-color: #191919;
+.logo, .profile, .navigation, .name{
+    height: inherit;  
+    background-color: #161b22;
     color: white;
-    border-radius: 2rem;
-    display: flex;
     align-items: center;
 }
 
 .logo{
-    margin-left: 40px;
+    margin-left: 25px;
 }
 
 .logo img{
-    height: 40px;
+    height: 60px;
+}
+
+.name{
+    margin-left : 10px;
+    font-weight : bold;
 }
 
 .profile{
-    margin-right: 40px;
+    margin-left: px;
 }
 
 .navigation{
-    justify-content: space-around;
+    margin-left: auto;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
 .navigation button{
     font-family: inherit;
-    font-weight: bold;
+    font-size : 16px;
+    height : inherit;
     border: none;
     color: white;
     width: 8rem;
-    padding: 1.5rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    padding: inherit;
     border-radius: inherit;
-    background-color: #191919;
+    background-color: #161b22;
     text-align: center;
     cursor: pointer;
 }
 
+.profile button{
+    font-family: inherit;
+    font-size : 16px;
+    border: none;
+    height : inherit;
+    color: white;
+    width: 8rem;
+    padding: 1.5rem;
+    margin-left: 0.5rem;
+    border-radius: inherit;
+    background-color: #161b22;
+    text-align: center;
+    cursor: pointer;
+}
+
+.name button{
+    font-size : 16px;
+    height : inherit;
+    border: none;
+    color: white;
+    width: 8rem;
+    padding: inherit;
+    background-color: #161b22;
+    text-align: center;
+    cursor: pointer;
+    outline : none;
+}
+
 .navigation button:hover{
     background: black;
+
+}
+
+.profile button:hover{
+    background: black;
+}
+
+.name button:hover{
+    color: cyan;
+}
+
+/*.profile button:focus{
+    background: linear-gradient(140deg,lch(89.548% 132 162.268),lch(90.666% 132 196.455))!important;
 }
 
 .navigation button:focus{
     background: linear-gradient(140deg,lch(89.548% 132 162.268),lch(90.666% 132 196.455))!important;
-}   
+} */
+
+

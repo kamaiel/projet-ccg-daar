@@ -1,8 +1,6 @@
 import 'dotenv/config'
 import { DeployFunction } from 'hardhat-deploy/types'
 import {contracts} from '../../frontend/src/contracts.json'
-import ethers, { ContractFactory } from 'ethers'
-import bytecode from '../artifacts/src/Main.sol/Main.json'
 import type { Main } from '$/Main'
 import metaDataSet from '../../frontend/src/metaDataSet.json'
 
@@ -27,8 +25,8 @@ const deployer: DeployFunction = async hre => {
     const contractMain = contract_ as any as Main
 
     console.log("ContractMain deployed with success", contractMain.address)
-    for(var i = 0 ; i < 6 ; i ++){
-      contractMain.createCollection(metaDataSet.data[i].name, Number(metaDataSet.data[i].total))
+    for(var i = metaDataSet.data.length-1 ; i >=0 ; i --){
+      contractMain.createCollection(metaDataSet.data[i].id, Number(metaDataSet.data[i].total))
     }
   
   }catch(error){

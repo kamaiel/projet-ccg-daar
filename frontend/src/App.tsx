@@ -116,12 +116,13 @@ export const App = () => {
     return wallet?.contract.getAllCollectionsName().then((result: any) => {console.log(result) ; return result});
   }
 
+  //<button onClick={mintCards}> Mint Card </button>
+    //  <button onClick={getCards}> Mes cartes</button>
+     // <button onClick={getCollectionsName}> Get Collections Name</button>
   return (
 
     <div>
-      <button onClick={mintCards}> Mint Card </button>
-      <button onClick={getCards}> Mes cartes</button>
-      <button onClick={getCollectionsName}> Get Collections Name</button>
+      <Header></Header>
       <Accueil wallet={wallet} />
     </div>
     )

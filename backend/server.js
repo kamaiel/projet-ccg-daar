@@ -8,20 +8,6 @@ const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
 
 /* ---------------------------------------------------------------------- */
 
-const {ethers}= require('ethers')
-/*const { Web3 } = require('web3')
-const provider = 'http://127.0.0.1:8545'
-const web3 = new Web3(provider)*/
-const ABI = require('../contracts/artifacts/src/Main.sol/Main.json')
-const abi = ABI.abi
-
-const contracts = require('../frontend/src/contracts.json')
-
-const bytecodeabi = ABI.bytecode
-
-var super_admin = null
-var MainContract = null
-
 /* ---------------------------------------------------------------------- */
 
 const metaDataSet = require('../frontend/src/metaDataSet.json')
@@ -30,13 +16,24 @@ const metaDataSet = require('../frontend/src/metaDataSet.json')
 
 app.use(cors())
 
-const adress_collec1 = {}
-/*const adress_collec2 = {}
-const adress_collec3 = {}
-const adress_collec4 = {}
-const adress_collec1 = {}*/
+/* -----------------Appels Front to Back ---------------- */
 
+app.get('/images', (req,res) => {
+    console.log(req.query)
+    const nomRecherche = req.query.nom
+    const collection = metaDataSet.data.find(item => item.id === nomRecherche);
+    if (!collection) {
+        return res.status(404).send('Images non trouvée');
+    }
 
+    const images = {
+        symbol: collection.images.symbol,
+        logo: collection.images.logo,
+        name : collection.name
+      };
+    
+      res.json(images);
+});
 
 
 /* -----------------Appels Exterieurs Pokemon TCG----------------- */
@@ -75,7 +72,5 @@ app.get('/id', (req,res) => {
 
 app.listen(port, async () => {
     console.log(`Server running on port ${port}`)
-    await deployContract()
-    creationCollection()
 })
 

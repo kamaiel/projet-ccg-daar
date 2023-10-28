@@ -1,23 +1,62 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
+import "./Accueil.css"
 
 
-export const Accueil = ({wallet}) => {
-    const [collections,setCollections] = useState<[]>()
+export const Accueil = ({ wallet }) => {
+    const [collections, setCollections] = useState([]);
+    const [imgCollections, setImgCollections] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const fetchImages = async (collections: string | any[]) => {
+        try {
+            let data_tab = [];
+            for (var i = 0; i < collections?.length; i++) {
+                const response = await fetch(`http://127.0.0.1:3000/images?nom=${collections[i]}`);
+                const data = await response.json();
+                data_tab.push(data);
+            }
+            setImgCollections(data_tab);
+            setLoading(false);
+        } catch (error) {
+            console.error('Erreur lors de la récupération des images de la collection :', error);
+        }
+    };
 
     useEffect(() => {
-        wallet?.contract.getAllCollectionsName().then((result: any) => {
-            setCollections(result);
-        })
-      }, []);
-  
+        const fetchCollections = async () => {
+            try {
+                const res = await wallet?.contract.getAllCollectionsName();
+                setCollections(res);
+            } catch (error) {
+                console.error('Erreur lors de la récupération des collections :', error);
+            }
+        };
+
+        fetchCollections();
+    }, [wallet]);
+
+    useEffect(() => {
+        if (collections?.length > 0) {
+            fetchImages(collections);
+        }
+    }, [collections]);
+
     return (
         <div>
             <h1>Collections Existantes</h1>
-            <ul>
-            {collections?.map((collection, index) => (
-                <li key={index}>{collection}</li>
-            ))}
-        </ul>
+            {loading && <p>Chargement en cours...</p>}
+            {!loading && (
+                <ul className="collections">
+                    {imgCollections.map((item : any, index : any) => (
+                        <div className = "collectionsLogo" key={index}>
+                            <img key={index} src={item.logo} alt={`Logo ${collections[index]}`} />
+                            <div className="NomCollec">
+                                {`Collection : ${item.name}`}
+                            </div>
+                        </div>   
+                    ))}
+                </ul>
+            )}
         </div>
-    )
-}
+    );
+};
