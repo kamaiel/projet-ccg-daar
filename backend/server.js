@@ -10,7 +10,8 @@ const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
 
 /* ---------------------------------------------------------------------- */
 
-const metaDataSet = require('../frontend/src/metaDataSet.json')
+// const metaDataSet = require('../frontend/src/metaDataSet.json')
+const metaDataSet = require("../db/collections.json")
 
 /* ---------------------------------------------------------------------- */
 
