@@ -122,7 +122,6 @@ export const App = () => {
   return (
 
     <div>
-      <Header></Header>
       <Accueil wallet={wallet} />
     </div>
     )

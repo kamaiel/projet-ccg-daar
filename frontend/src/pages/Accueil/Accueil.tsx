@@ -1,5 +1,6 @@
 import { SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
 import "./Accueil.css"
+import { Link } from 'react-router-dom';
 
 
 export const Accueil = ({ wallet }) => {
@@ -49,10 +50,12 @@ export const Accueil = ({ wallet }) => {
                 <ul className="collections">
                     {imgCollections.map((item : any, index : any) => (
                         <div className = "collectionsLogo" key={index}>
+                            <Link to={`/collection/${item.name}`}>
                             <img key={index} src={item.logo} alt={`Logo ${collections[index]}`} />
                             <div className="NomCollec">
                                 {`Collection : ${item.name}`}
                             </div>
+                            </Link>
                         </div>   
                     ))}
                 </ul>

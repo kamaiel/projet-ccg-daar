@@ -1,5 +1,6 @@
 import React from "react"
 import "./Header.css"
+import { Link, NavLink } from "react-router-dom"
 
 export const Header = () => {
     return (
@@ -8,9 +9,11 @@ export const Header = () => {
                 <img src="/rondoudou.png" alt="logo pokemon" />
             </div>
             <div className="name">
+                <NavLink to="/">
                 <button className="deck">
                     PokéTCGBis
                 </button>
+                </NavLink>
             </div>
             <div className="navigation">
                 <button className="deck">
