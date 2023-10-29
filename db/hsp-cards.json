@@ -1,0 +1,204 @@
+{
+    "data": [
+        {
+            "id": "hsp-HGSS01",
+            "name": "Ho-Oh",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS01.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS01_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS02",
+            "name": "Lugia",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS02.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS02_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS03",
+            "name": "Pikachu",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS03.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS03_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS04",
+            "name": "Wobbuffet",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS04.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS04_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS05",
+            "name": "Hoothoot",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS05.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS05_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS06",
+            "name": "Noctowl",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS06.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS06_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS07",
+            "name": "Feraligatr",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS07.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS07_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS08",
+            "name": "Meganium",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS08.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS08_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS09",
+            "name": "Typhlosion",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS09.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS09_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS10",
+            "name": "Latias",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS10.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS10_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS12",
+            "name": "Cleffa",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS12.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS12_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS11",
+            "name": "Latios",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS11.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS11_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS13",
+            "name": "Smoochum",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS13.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS13_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS14",
+            "name": "Lapras",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS14.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS14_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS16",
+            "name": "Plusle",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS16.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS16_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS15",
+            "name": "Shuckle",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS15.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS15_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS17",
+            "name": "Minun",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS17.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS17_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS18",
+            "name": "Tropical Tidal Wave",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS18.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS18_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS19",
+            "name": "Raikou",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS19.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS19_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS20",
+            "name": "Entei",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS20.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS20_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS22",
+            "name": "Porygon",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS22.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS22_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS23",
+            "name": "Porygon2",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS23.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS23_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS24",
+            "name": "Hitmonchan",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS24.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS24_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS21",
+            "name": "Suicune",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS21.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS21_hires.png"
+            }
+        },
+        {
+            "id": "hsp-HGSS25",
+            "name": "Hitmonlee",
+            "images": {
+                "small": "https://images.pokemontcg.io/hsp/HGSS25.png",
+                "large": "https://images.pokemontcg.io/hsp/HGSS25_hires.png"
+            }
+        }
+    ]
+}

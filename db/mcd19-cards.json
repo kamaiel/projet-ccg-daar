@@ -1,0 +1,100 @@
+{
+    "data": [
+        {
+            "id": "mcd19-1",
+            "name": "Caterpie",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/1.png",
+                "large": "https://images.pokemontcg.io/mcd19/1_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-2",
+            "name": "Alolan Exeggutor",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/2.png",
+                "large": "https://images.pokemontcg.io/mcd19/2_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-3",
+            "name": "Magmar",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/3.png",
+                "large": "https://images.pokemontcg.io/mcd19/3_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-4",
+            "name": "Alolan Sandshrew",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/4.png",
+                "large": "https://images.pokemontcg.io/mcd19/4_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-7",
+            "name": "Gastly",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/7.png",
+                "large": "https://images.pokemontcg.io/mcd19/7_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-5",
+            "name": "Lapras",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/5.png",
+                "large": "https://images.pokemontcg.io/mcd19/5_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-6",
+            "name": "Pikachu",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/6.png",
+                "large": "https://images.pokemontcg.io/mcd19/6_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-8",
+            "name": "Mankey",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/8.png",
+                "large": "https://images.pokemontcg.io/mcd19/8_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-10",
+            "name": "Alolan Meowth",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/10.png",
+                "large": "https://images.pokemontcg.io/mcd19/10_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-11",
+            "name": "Alolan Dugtrio",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/11.png",
+                "large": "https://images.pokemontcg.io/mcd19/11_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-9",
+            "name": "Onix",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/9.png",
+                "large": "https://images.pokemontcg.io/mcd19/9_hires.png"
+            }
+        },
+        {
+            "id": "mcd19-12",
+            "name": "Eevee",
+            "images": {
+                "small": "https://images.pokemontcg.io/mcd19/12.png",
+                "large": "https://images.pokemontcg.io/mcd19/12_hires.png"
+            }
+        }
+    ]
+}

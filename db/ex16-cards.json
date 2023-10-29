@@ -1,0 +1,868 @@
+{
+    "data": [
+        {
+            "id": "ex16-1",
+            "name": "Aggron",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/1.png",
+                "large": "https://images.pokemontcg.io/ex16/1_hires.png"
+            }
+        },
+        {
+            "id": "ex16-3",
+            "name": "Armaldo",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/3.png",
+                "large": "https://images.pokemontcg.io/ex16/3_hires.png"
+            }
+        },
+        {
+            "id": "ex16-2",
+            "name": "Altaria",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/2.png",
+                "large": "https://images.pokemontcg.io/ex16/2_hires.png"
+            }
+        },
+        {
+            "id": "ex16-4",
+            "name": "Banette",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/4.png",
+                "large": "https://images.pokemontcg.io/ex16/4_hires.png"
+            }
+        },
+        {
+            "id": "ex16-5",
+            "name": "Blaziken",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/5.png",
+                "large": "https://images.pokemontcg.io/ex16/5_hires.png"
+            }
+        },
+        {
+            "id": "ex16-6",
+            "name": "Charizard",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/6.png",
+                "large": "https://images.pokemontcg.io/ex16/6_hires.png"
+            }
+        },
+        {
+            "id": "ex16-7",
+            "name": "Cradily",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/7.png",
+                "large": "https://images.pokemontcg.io/ex16/7_hires.png"
+            }
+        },
+        {
+            "id": "ex16-9",
+            "name": "Gardevoir",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/9.png",
+                "large": "https://images.pokemontcg.io/ex16/9_hires.png"
+            }
+        },
+        {
+            "id": "ex16-8",
+            "name": "Delcatty",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/8.png",
+                "large": "https://images.pokemontcg.io/ex16/8_hires.png"
+            }
+        },
+        {
+            "id": "ex16-10",
+            "name": "Kabutops",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/10.png",
+                "large": "https://images.pokemontcg.io/ex16/10_hires.png"
+            }
+        },
+        {
+            "id": "ex16-11",
+            "name": "Machamp",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/11.png",
+                "large": "https://images.pokemontcg.io/ex16/11_hires.png"
+            }
+        },
+        {
+            "id": "ex16-12",
+            "name": "Raichu",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/12.png",
+                "large": "https://images.pokemontcg.io/ex16/12_hires.png"
+            }
+        },
+        {
+            "id": "ex16-14",
+            "name": "Dusclops",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/14.png",
+                "large": "https://images.pokemontcg.io/ex16/14_hires.png"
+            }
+        },
+        {
+            "id": "ex16-13",
+            "name": "Slaking",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/13.png",
+                "large": "https://images.pokemontcg.io/ex16/13_hires.png"
+            }
+        },
+        {
+            "id": "ex16-15",
+            "name": "Lanturn",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/15.png",
+                "large": "https://images.pokemontcg.io/ex16/15_hires.png"
+            }
+        },
+        {
+            "id": "ex16-17",
+            "name": "Mawile",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/17.png",
+                "large": "https://images.pokemontcg.io/ex16/17_hires.png"
+            }
+        },
+        {
+            "id": "ex16-16",
+            "name": "Magneton",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/16.png",
+                "large": "https://images.pokemontcg.io/ex16/16_hires.png"
+            }
+        },
+        {
+            "id": "ex16-18",
+            "name": "Mightyena",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/18.png",
+                "large": "https://images.pokemontcg.io/ex16/18_hires.png"
+            }
+        },
+        {
+            "id": "ex16-19",
+            "name": "Ninetales",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/19.png",
+                "large": "https://images.pokemontcg.io/ex16/19_hires.png"
+            }
+        },
+        {
+            "id": "ex16-21",
+            "name": "Pichu",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/21.png",
+                "large": "https://images.pokemontcg.io/ex16/21_hires.png"
+            }
+        },
+        {
+            "id": "ex16-20",
+            "name": "Omastar",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/20.png",
+                "large": "https://images.pokemontcg.io/ex16/20_hires.png"
+            }
+        },
+        {
+            "id": "ex16-24",
+            "name": "Wobbuffet",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/24.png",
+                "large": "https://images.pokemontcg.io/ex16/24_hires.png"
+            }
+        },
+        {
+            "id": "ex16-26",
+            "name": "Anorith",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/26.png",
+                "large": "https://images.pokemontcg.io/ex16/26_hires.png"
+            }
+        },
+        {
+            "id": "ex16-22",
+            "name": "Sableye",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/22.png",
+                "large": "https://images.pokemontcg.io/ex16/22_hires.png"
+            }
+        },
+        {
+            "id": "ex16-23",
+            "name": "Seviper",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/23.png",
+                "large": "https://images.pokemontcg.io/ex16/23_hires.png"
+            }
+        },
+        {
+            "id": "ex16-25",
+            "name": "Zangoose",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/25.png",
+                "large": "https://images.pokemontcg.io/ex16/25_hires.png"
+            }
+        },
+        {
+            "id": "ex16-27",
+            "name": "Cacturne",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/27.png",
+                "large": "https://images.pokemontcg.io/ex16/27_hires.png"
+            }
+        },
+        {
+            "id": "ex16-28",
+            "name": "Charmeleon",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/28.png",
+                "large": "https://images.pokemontcg.io/ex16/28_hires.png"
+            }
+        },
+        {
+            "id": "ex16-29",
+            "name": "Combusken",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/29.png",
+                "large": "https://images.pokemontcg.io/ex16/29_hires.png"
+            }
+        },
+        {
+            "id": "ex16-30",
+            "name": "Glalie",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/30.png",
+                "large": "https://images.pokemontcg.io/ex16/30_hires.png"
+            }
+        },
+        {
+            "id": "ex16-31",
+            "name": "Kirlia",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/31.png",
+                "large": "https://images.pokemontcg.io/ex16/31_hires.png"
+            }
+        },
+        {
+            "id": "ex16-32",
+            "name": "Lairon",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/32.png",
+                "large": "https://images.pokemontcg.io/ex16/32_hires.png"
+            }
+        },
+        {
+            "id": "ex16-34",
+            "name": "Medicham",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/34.png",
+                "large": "https://images.pokemontcg.io/ex16/34_hires.png"
+            }
+        },
+        {
+            "id": "ex16-33",
+            "name": "Machoke",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/33.png",
+                "large": "https://images.pokemontcg.io/ex16/33_hires.png"
+            }
+        },
+        {
+            "id": "ex16-35",
+            "name": "Metang",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/35.png",
+                "large": "https://images.pokemontcg.io/ex16/35_hires.png"
+            }
+        },
+        {
+            "id": "ex16-36",
+            "name": "Nuzleaf",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/36.png",
+                "large": "https://images.pokemontcg.io/ex16/36_hires.png"
+            }
+        },
+        {
+            "id": "ex16-37",
+            "name": "Sealeo",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/37.png",
+                "large": "https://images.pokemontcg.io/ex16/37_hires.png"
+            }
+        },
+        {
+            "id": "ex16-38",
+            "name": "Sharpedo",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/38.png",
+                "large": "https://images.pokemontcg.io/ex16/38_hires.png"
+            }
+        },
+        {
+            "id": "ex16-39",
+            "name": "Shelgon",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/39.png",
+                "large": "https://images.pokemontcg.io/ex16/39_hires.png"
+            }
+        },
+        {
+            "id": "ex16-41",
+            "name": "Vigoroth",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/41.png",
+                "large": "https://images.pokemontcg.io/ex16/41_hires.png"
+            }
+        },
+        {
+            "id": "ex16-40",
+            "name": "Vibrava",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/40.png",
+                "large": "https://images.pokemontcg.io/ex16/40_hires.png"
+            }
+        },
+        {
+            "id": "ex16-42",
+            "name": "Aron",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/42.png",
+                "large": "https://images.pokemontcg.io/ex16/42_hires.png"
+            }
+        },
+        {
+            "id": "ex16-44",
+            "name": "Baltoy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/44.png",
+                "large": "https://images.pokemontcg.io/ex16/44_hires.png"
+            }
+        },
+        {
+            "id": "ex16-48",
+            "name": "Charmander",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/48.png",
+                "large": "https://images.pokemontcg.io/ex16/48_hires.png"
+            }
+        },
+        {
+            "id": "ex16-43",
+            "name": "Bagon",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/43.png",
+                "large": "https://images.pokemontcg.io/ex16/43_hires.png"
+            }
+        },
+        {
+            "id": "ex16-45",
+            "name": "Beldum",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/45.png",
+                "large": "https://images.pokemontcg.io/ex16/45_hires.png"
+            }
+        },
+        {
+            "id": "ex16-46",
+            "name": "Cacnea",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/46.png",
+                "large": "https://images.pokemontcg.io/ex16/46_hires.png"
+            }
+        },
+        {
+            "id": "ex16-47",
+            "name": "Carvanha",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/47.png",
+                "large": "https://images.pokemontcg.io/ex16/47_hires.png"
+            }
+        },
+        {
+            "id": "ex16-49",
+            "name": "Chinchou",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/49.png",
+                "large": "https://images.pokemontcg.io/ex16/49_hires.png"
+            }
+        },
+        {
+            "id": "ex16-50",
+            "name": "Duskull",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/50.png",
+                "large": "https://images.pokemontcg.io/ex16/50_hires.png"
+            }
+        },
+        {
+            "id": "ex16-51",
+            "name": "Kabuto",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/51.png",
+                "large": "https://images.pokemontcg.io/ex16/51_hires.png"
+            }
+        },
+        {
+            "id": "ex16-52",
+            "name": "Lileep",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/52.png",
+                "large": "https://images.pokemontcg.io/ex16/52_hires.png"
+            }
+        },
+        {
+            "id": "ex16-53",
+            "name": "Machop",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/53.png",
+                "large": "https://images.pokemontcg.io/ex16/53_hires.png"
+            }
+        },
+        {
+            "id": "ex16-55",
+            "name": "Meditite",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/55.png",
+                "large": "https://images.pokemontcg.io/ex16/55_hires.png"
+            }
+        },
+        {
+            "id": "ex16-54",
+            "name": "Magnemite",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/54.png",
+                "large": "https://images.pokemontcg.io/ex16/54_hires.png"
+            }
+        },
+        {
+            "id": "ex16-59",
+            "name": "Ralts",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/59.png",
+                "large": "https://images.pokemontcg.io/ex16/59_hires.png"
+            }
+        },
+        {
+            "id": "ex16-56",
+            "name": "Omanyte",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/56.png",
+                "large": "https://images.pokemontcg.io/ex16/56_hires.png"
+            }
+        },
+        {
+            "id": "ex16-57",
+            "name": "Pikachu",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/57.png",
+                "large": "https://images.pokemontcg.io/ex16/57_hires.png"
+            }
+        },
+        {
+            "id": "ex16-58",
+            "name": "Poochyena",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/58.png",
+                "large": "https://images.pokemontcg.io/ex16/58_hires.png"
+            }
+        },
+        {
+            "id": "ex16-60",
+            "name": "Seedot",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/60.png",
+                "large": "https://images.pokemontcg.io/ex16/60_hires.png"
+            }
+        },
+        {
+            "id": "ex16-62",
+            "name": "Skitty",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/62.png",
+                "large": "https://images.pokemontcg.io/ex16/62_hires.png"
+            }
+        },
+        {
+            "id": "ex16-63",
+            "name": "Slakoth",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/63.png",
+                "large": "https://images.pokemontcg.io/ex16/63_hires.png"
+            }
+        },
+        {
+            "id": "ex16-61",
+            "name": "Shuppet",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/61.png",
+                "large": "https://images.pokemontcg.io/ex16/61_hires.png"
+            }
+        },
+        {
+            "id": "ex16-65",
+            "name": "Spheal",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/65.png",
+                "large": "https://images.pokemontcg.io/ex16/65_hires.png"
+            }
+        },
+        {
+            "id": "ex16-64",
+            "name": "Snorunt",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/64.png",
+                "large": "https://images.pokemontcg.io/ex16/64_hires.png"
+            }
+        },
+        {
+            "id": "ex16-66",
+            "name": "Swablu",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/66.png",
+                "large": "https://images.pokemontcg.io/ex16/66_hires.png"
+            }
+        },
+        {
+            "id": "ex16-67",
+            "name": "Torchic",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/67.png",
+                "large": "https://images.pokemontcg.io/ex16/67_hires.png"
+            }
+        },
+        {
+            "id": "ex16-68",
+            "name": "Trapinch",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/68.png",
+                "large": "https://images.pokemontcg.io/ex16/68_hires.png"
+            }
+        },
+        {
+            "id": "ex16-69",
+            "name": "Vulpix",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/69.png",
+                "large": "https://images.pokemontcg.io/ex16/69_hires.png"
+            }
+        },
+        {
+            "id": "ex16-70",
+            "name": "Wynaut",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/70.png",
+                "large": "https://images.pokemontcg.io/ex16/70_hires.png"
+            }
+        },
+        {
+            "id": "ex16-71",
+            "name": "Battle Frontier",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/71.png",
+                "large": "https://images.pokemontcg.io/ex16/71_hires.png"
+            }
+        },
+        {
+            "id": "ex16-73",
+            "name": "Energy Recycle System",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/73.png",
+                "large": "https://images.pokemontcg.io/ex16/73_hires.png"
+            }
+        },
+        {
+            "id": "ex16-72",
+            "name": "Drake's Stadium",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/72.png",
+                "large": "https://images.pokemontcg.io/ex16/72_hires.png"
+            }
+        },
+        {
+            "id": "ex16-74",
+            "name": "Energy Removal 2",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/74.png",
+                "large": "https://images.pokemontcg.io/ex16/74_hires.png"
+            }
+        },
+        {
+            "id": "ex16-75",
+            "name": "Energy Switch",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/75.png",
+                "large": "https://images.pokemontcg.io/ex16/75_hires.png"
+            }
+        },
+        {
+            "id": "ex16-76",
+            "name": "Glacia's Stadium",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/76.png",
+                "large": "https://images.pokemontcg.io/ex16/76_hires.png"
+            }
+        },
+        {
+            "id": "ex16-77",
+            "name": "Great Ball",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/77.png",
+                "large": "https://images.pokemontcg.io/ex16/77_hires.png"
+            }
+        },
+        {
+            "id": "ex16-78",
+            "name": "Master Ball",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/78.png",
+                "large": "https://images.pokemontcg.io/ex16/78_hires.png"
+            }
+        },
+        {
+            "id": "ex16-79",
+            "name": "Phoebe's Stadium",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/79.png",
+                "large": "https://images.pokemontcg.io/ex16/79_hires.png"
+            }
+        },
+        {
+            "id": "ex16-80",
+            "name": "Professor Birch",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/80.png",
+                "large": "https://images.pokemontcg.io/ex16/80_hires.png"
+            }
+        },
+        {
+            "id": "ex16-81",
+            "name": "Scott",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/81.png",
+                "large": "https://images.pokemontcg.io/ex16/81_hires.png"
+            }
+        },
+        {
+            "id": "ex16-82",
+            "name": "Sidney's Stadium",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/82.png",
+                "large": "https://images.pokemontcg.io/ex16/82_hires.png"
+            }
+        },
+        {
+            "id": "ex16-83",
+            "name": "Steven's Advice",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/83.png",
+                "large": "https://images.pokemontcg.io/ex16/83_hires.png"
+            }
+        },
+        {
+            "id": "ex16-84",
+            "name": "Claw Fossil",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/84.png",
+                "large": "https://images.pokemontcg.io/ex16/84_hires.png"
+            }
+        },
+        {
+            "id": "ex16-92",
+            "name": "Absol ex",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/92.png",
+                "large": "https://images.pokemontcg.io/ex16/92_hires.png"
+            }
+        },
+        {
+            "id": "ex16-86",
+            "name": "Root Fossil",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/86.png",
+                "large": "https://images.pokemontcg.io/ex16/86_hires.png"
+            }
+        },
+        {
+            "id": "ex16-88",
+            "name": "Metal Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/88.png",
+                "large": "https://images.pokemontcg.io/ex16/88_hires.png"
+            }
+        },
+        {
+            "id": "ex16-85",
+            "name": "Mysterious Fossil",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/85.png",
+                "large": "https://images.pokemontcg.io/ex16/85_hires.png"
+            }
+        },
+        {
+            "id": "ex16-87",
+            "name": "Darkness Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/87.png",
+                "large": "https://images.pokemontcg.io/ex16/87_hires.png"
+            }
+        },
+        {
+            "id": "ex16-89",
+            "name": "Multi Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/89.png",
+                "large": "https://images.pokemontcg.io/ex16/89_hires.png"
+            }
+        },
+        {
+            "id": "ex16-90",
+            "name": "Cyclone Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/90.png",
+                "large": "https://images.pokemontcg.io/ex16/90_hires.png"
+            }
+        },
+        {
+            "id": "ex16-91",
+            "name": "Warp Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/91.png",
+                "large": "https://images.pokemontcg.io/ex16/91_hires.png"
+            }
+        },
+        {
+            "id": "ex16-93",
+            "name": "Claydol ex",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/93.png",
+                "large": "https://images.pokemontcg.io/ex16/93_hires.png"
+            }
+        },
+        {
+            "id": "ex16-94",
+            "name": "Flygon ex",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/94.png",
+                "large": "https://images.pokemontcg.io/ex16/94_hires.png"
+            }
+        },
+        {
+            "id": "ex16-97",
+            "name": "Shiftry ex",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/97.png",
+                "large": "https://images.pokemontcg.io/ex16/97_hires.png"
+            }
+        },
+        {
+            "id": "ex16-98",
+            "name": "Skarmory ex",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/98.png",
+                "large": "https://images.pokemontcg.io/ex16/98_hires.png"
+            }
+        },
+        {
+            "id": "ex16-95",
+            "name": "Metagross ex",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/95.png",
+                "large": "https://images.pokemontcg.io/ex16/95_hires.png"
+            }
+        },
+        {
+            "id": "ex16-96",
+            "name": "Salamence ex",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/96.png",
+                "large": "https://images.pokemontcg.io/ex16/96_hires.png"
+            }
+        },
+        {
+            "id": "ex16-99",
+            "name": "Walrein ex",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/99.png",
+                "large": "https://images.pokemontcg.io/ex16/99_hires.png"
+            }
+        },
+        {
+            "id": "ex16-100",
+            "name": "Flareon \u2605",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/100.png",
+                "large": "https://images.pokemontcg.io/ex16/100_hires.png"
+            }
+        },
+        {
+            "id": "ex16-101",
+            "name": "Jolteon \u2605",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/101.png",
+                "large": "https://images.pokemontcg.io/ex16/101_hires.png"
+            }
+        },
+        {
+            "id": "ex16-102",
+            "name": "Vaporeon \u2605",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/102.png",
+                "large": "https://images.pokemontcg.io/ex16/102_hires.png"
+            }
+        },
+        {
+            "id": "ex16-103",
+            "name": "Grass Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/103.png",
+                "large": "https://images.pokemontcg.io/ex16/103_hires.png"
+            }
+        },
+        {
+            "id": "ex16-104",
+            "name": "Fire Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/104.png",
+                "large": "https://images.pokemontcg.io/ex16/104_hires.png"
+            }
+        },
+        {
+            "id": "ex16-105",
+            "name": "Water Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/105.png",
+                "large": "https://images.pokemontcg.io/ex16/105_hires.png"
+            }
+        },
+        {
+            "id": "ex16-106",
+            "name": "Lightning Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/106.png",
+                "large": "https://images.pokemontcg.io/ex16/106_hires.png"
+            }
+        },
+        {
+            "id": "ex16-107",
+            "name": "Psychic Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/107.png",
+                "large": "https://images.pokemontcg.io/ex16/107_hires.png"
+            }
+        },
+        {
+            "id": "ex16-108",
+            "name": "Fighting Energy",
+            "images": {
+                "small": "https://images.pokemontcg.io/ex16/108.png",
+                "large": "https://images.pokemontcg.io/ex16/108_hires.png"
+            }
+        }
+    ]
+}
