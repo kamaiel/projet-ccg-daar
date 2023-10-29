@@ -1,6 +1,7 @@
 import { SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
 import "./Accueil.css"
 import { Link } from 'react-router-dom';
+import {Collection} from '../Collection/Collection'
 
 
 export const Accueil = ({ wallet }) => {
@@ -17,6 +18,7 @@ export const Accueil = ({ wallet }) => {
                 data_tab.push(data);
             }
             setImgCollections(data_tab);
+            localStorage.setItem('imgCollections', JSON.stringify(imgCollections));
             setLoading(false);
         } catch (error) {
             console.error('Erreur lors de la récupération des images de la collection :', error);
@@ -37,20 +39,25 @@ export const Accueil = ({ wallet }) => {
     }, [wallet]);
 
     useEffect(() => {
-        if (collections?.length > 0) {
+        if (collections?.length > 0 ) {
             fetchImages(collections);
         }
+
     }, [collections]);
 
     return (
         <div>
-            <h1>Collections Existantes</h1>
-            {loading && <p>Chargement en cours...</p>}
+            <h1>Collections existantes dans la blockchain</h1>
+            {!wallet && <p>Veuillez vous connecter à votre compte metamask...</p>}
+            {loading && wallet && <p>Chargement en cours...</p>}
             {!loading && (
                 <ul className="collections">
                     {imgCollections.map((item : any, index : any) => (
                         <div className = "collectionsLogo" key={index}>
-                            <Link to={`/collection/${item.name}`}>
+                            <Link to={`/collection/${item.id}`} state={{
+                                name : item.name,
+                                id : item.id,
+                                series : item.serie}}>
                             <img key={index} src={item.logo} alt={`Logo ${collections[index]}`} />
                             <div className="NomCollec">
                                 {`Collection : ${item.name}`}

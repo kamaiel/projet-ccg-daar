@@ -20,7 +20,6 @@ app.use(cors())
 /* -----------------Appels Front to Back ---------------- */
 
 app.get('/images', (req,res) => {
-    console.log(req.query)
     const nomRecherche = req.query.nom
     const collection = metaDataSet.data.find(item => item.id === nomRecherche);
     if (!collection) {
@@ -30,11 +29,29 @@ app.get('/images', (req,res) => {
     const images = {
         symbol: collection.images.symbol,
         logo: collection.images.logo,
-        name : collection.name
+        name : collection.name,
+        id : collection.id,
+        serie : collection.series
       };
     
       res.json(images);
 });
+
+
+app.get('/collection', (req,res) => {
+    let cartes = []
+    const id = req.query.nom
+    const metadonne = require("../db/"+id+"-cards.json")
+    for(var i = 0 ; i < metadonne.data.length ; i++){
+        const carte = {
+            link : metadonne.data[i].images.small,
+            linkBig : metadonne.data[i].images.large,
+            name : metadonne.data[i].name
+        }
+        cartes.push(carte)
+    }
+    res.json(cartes)
+})
 
 
 /* -----------------Appels Exterieurs Pokemon TCG----------------- */

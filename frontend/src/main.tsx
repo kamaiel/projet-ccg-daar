@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(node)
 root.render(
   <React.StrictMode>
     <Router> 
-     <Header></Header>
+      <Header></Header>
       <Routes>
         <Route path="/" Component={App}/>
         <Route path="/collection/:id" Component={Collection}/>
