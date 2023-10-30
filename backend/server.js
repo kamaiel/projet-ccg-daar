@@ -58,7 +58,7 @@ app.get('/booster', (req,res)=>{
     const collectionCards = require("../db/"+collectionId+"-cards.json")
     var cardsIndex = []
     while(cardsIndex.length < 5){
-        var r = Math.floor(Math.random() * collectionCards.data.length) + 1;
+        var r = Math.floor(Math.random() * collectionCards.data.length);
         if(cardsIndex.indexOf(r) === -1) cardsIndex.push(r);
     }
     

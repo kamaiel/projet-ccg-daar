@@ -6,6 +6,7 @@ import "./Collection.sol";
 contract Main {
     address public owner;
     mapping(int => Collection) private collections;
+    mapping(string=>int) private collectionNameToId;
     int private collectionCount;
 
     modifier onlyOwner() {
@@ -22,10 +23,20 @@ contract Main {
     function createCollection(string calldata name, uint cardCount) external onlyOwner returns (Collection) {
       Collection newCollection = new Collection(name, cardCount);
       collections[collectionCount++] = newCollection;
+      collectionNameToId[name] = collectionCount;
       return newCollection;
     }
 
      function mintCards(int collectionId, address to, string[] memory cardURIs) external{
+        require(collectionId < collectionCount, "Invalid collection ID");
+        Collection collection = collections[collectionId];
+        for (uint i = 0; i < cardURIs.length; i++) {
+            collection.safeMint(to, cardURIs[i]);
+        }
+    }
+
+    function mintCards(string memory collectionName, address to, string[] memory cardURIs) external{
+        int collectionId = collectionNameToId[collectionName];
         require(collectionId < collectionCount, "Invalid collection ID");
         Collection collection = collections[collectionId];
         for (uint i = 0; i < cardURIs.length; i++) {

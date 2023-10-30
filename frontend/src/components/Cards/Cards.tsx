@@ -14,7 +14,6 @@ export const Cards = (props:any) => {
                 {cards.map((card : any, index : any) => (
                     <img key={index} src={card.link} alt={'Carte'} style={{filter:props.isPlayerCard&&"brightness(1)"}} />
                 )
-
                 )}
         </ul>
     )
