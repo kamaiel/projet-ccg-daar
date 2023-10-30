@@ -19,12 +19,16 @@ export const Header = () => {
                 <button className="deck">
                     Collections
                 </button>
-                <button className="market">
-                    Mes cartes
-                </button>
-                <button className="pack">
-                    Achat 
-                </button>
+                <Link to={"/mycards"}>
+                    <button className="myCards">
+                        Mes cartes
+                    </button>   
+                </Link>
+                <Link to={"/achat"}>
+                    <button className="pack">
+                        Achat 
+                    </button>
+                </Link>
             </div>
             <div className="profile">
                 <button className="Account"> Profil </button>

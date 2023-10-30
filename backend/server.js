@@ -53,6 +53,28 @@ app.get('/collection', (req,res) => {
     res.json(cartes)
 })
 
+app.get('/booster', (req,res)=>{
+    const collectionId = req.query.id
+    const collectionCards = require("../db/"+collectionId+"-cards.json")
+    var cardsIndex = []
+    while(cardsIndex.length < 5){
+        var r = Math.floor(Math.random() * collectionCards.data.length) + 1;
+        if(cardsIndex.indexOf(r) === -1) cardsIndex.push(r);
+    }
+    
+    var cards = []
+    for(var i = 0 ; i < cardsIndex.length ; i++){
+        const carte = {
+            link : collectionCards.data[cardsIndex[i]].images.small,
+            linkBig : collectionCards.data[cardsIndex[i]].images.large,
+            name : collectionCards.data[cardsIndex[i]].name,
+            id : collectionCards.data[cardsIndex[i]].id
+        }
+        cards.push(carte)
+    }
+    res.json(cards)
+})
+
 
 /* -----------------Appels Exterieurs Pokemon TCG----------------- */
 

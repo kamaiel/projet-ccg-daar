@@ -2,12 +2,16 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import styles from './styles.module.css'
 import * as ethereum from '@/lib/ethereum'
 import * as main from '@/lib/main'
-
+import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
 import "./App.css"
 
+import { Collection } from './pages/Collection/Collection'
+import {MyCards} from './pages/MyCards/MyCards'
 import {Header} from './components/Header/Header'
-import {Deck} from './pages/Deck/Deck'
 import {Accueil} from './pages/Accueil/Accueil'
+import {Achat} from './pages/Achat/Achat'
+
+
 //simport {CollectionCard} from './components/CollectionCard/CollectionCard'
 
 
@@ -120,9 +124,18 @@ export const App = () => {
     //  <button onClick={getCards}> Mes cartes</button>
      // <button onClick={getCollectionsName}> Get Collections Name</button>
   return (
+    <Router> 
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Accueil wallet={wallet}></Accueil>}/>
+        <Route path="/collection/:id" Component={Collection}/>
+        <Route path="/mycards" element={<MyCards wallet={wallet}></MyCards>}/>
+        <Route path="/achat" element={<Achat wallet={wallet}></Achat>}/>
+      </Routes>
+    </Router>
 
-    <div>
-      <Accueil wallet={wallet} />
-    </div>
+    // <div>
+    //   <Accueil wallet={wallet} />
+    // </div>
     )
 }

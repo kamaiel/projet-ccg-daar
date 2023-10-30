@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from "react-router";
 import './Collection.css'
+import {Cards} from "../../components/Cards/Cards"
 
 export const Collection = () => {
     const [cards, setCards] = useState([]);
@@ -27,13 +28,7 @@ export const Collection = () => {
         <div>
              <h1> {series} : {name} </h1>
              <div className="container">
-             <ul className="cartes">
-                {cards.map((card : any, index : any) => (
-                    <img key={index} src={card.link} alt={'Carte'} />
-                )
-
-                )}
-            </ul>
+                <Cards cards={cards}></Cards>
             </div>
         </div>
        

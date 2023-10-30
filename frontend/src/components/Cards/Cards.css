@@ -1,4 +1,4 @@
-.card{
+/* .card{
     margin: 2rem;
     margin-bottom: 5rem;
     height: 30rem;
@@ -8,4 +8,18 @@
 .card img{
     width: 350px;
     object-fit: cover;
+} */
+.carte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.cartes img{
+    filter: brightness(0.2); 
+    margin: 0 1rem 1.5rem;
+    
 }
