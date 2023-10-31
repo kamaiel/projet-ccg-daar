@@ -5,6 +5,7 @@ const app = express()
 const cors = require('cors')
 const port = 3000 
 const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
+const crypto = require('crypto');
 
 /* ---------------------------------------------------------------------- */
 
@@ -68,6 +69,7 @@ app.get("/collectionsData", (req,res) => {
 })
 
 app.get('/booster', (req,res)=>{
+
     const collectionId = req.query.id
     const collectionCards = require("../db/"+collectionId+"-cards.json")
     var cardsIndex = []
@@ -86,7 +88,8 @@ app.get('/booster', (req,res)=>{
         }
         cards.push(carte)
     }
-    res.json(cards)
+
+  res.json(cards)
 })
 
 

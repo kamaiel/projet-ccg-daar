@@ -10,7 +10,7 @@ export const Collections = ({ wallet }) => {
 
     const fetchCollectionsData = async () => {
         const response = await fetch(`http://127.0.0.1:3000/collectionsData`).then((response) => {return response.json()});
-        setImgCollections(response);
+        setImgCollections(response.sort((a,b) => a.name.localeCompare(b.name)));
         setLoading(false);
     }
 
