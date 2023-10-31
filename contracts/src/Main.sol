@@ -27,14 +27,6 @@ contract Main {
       return newCollection;
     }
 
-     function mintCards(int collectionId, address to, string[] memory cardURIs) external{
-        require(collectionId < collectionCount, "Invalid collection ID");
-        Collection collection = collections[collectionId];
-        for (uint i = 0; i < cardURIs.length; i++) {
-            collection.safeMint(to, cardURIs[i]);
-        }
-    }
-
     function mintCards(string memory collectionName, address to, string[] memory cardURIs) external{
         int collectionId = collectionNameToId[collectionName];
         require(collectionId < collectionCount, "Invalid collection ID");
@@ -44,13 +36,15 @@ contract Main {
         }
     }
 
-    function possessNFT(int _collectionId, address _owner) external view returns (int) {
-        require(_collectionId < collectionCount, "Invalid collection ID");
-        Collection c = collections[_collectionId];
+     function possessNFT(string memory _collectionName, address _owner) external view returns (int) {
+        int collectionId = collectionNameToId[_collectionName];
+        require(collectionId < collectionCount, "Invalid collection ID");
+        Collection c = collections[collectionId];
         return int(c.balanceOf(_owner));
     }
 
-    function getNFT(int _collectionId, address _owner) external view returns (string[] memory) {
+     function getNFT(string memory _collectionName, address _owner) external view returns (string[] memory) {
+        int _collectionId = collectionNameToId[_collectionName];
         require(_collectionId < collectionCount, "Invalid collection ID");
         Collection c = collections[_collectionId];
         return c.getNFTOwner(_owner);

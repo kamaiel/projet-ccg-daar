@@ -10,6 +10,7 @@ import {MyCards} from './pages/MyCards/MyCards'
 import {Header} from './components/Header/Header'
 import {Accueil} from './pages/Accueil/Accueil'
 import {Achat} from './pages/Achat/Achat'
+import {Collections} from './pages/Collections/Collections'
 
 
 //simport {CollectionCard} from './components/CollectionCard/CollectionCard'
@@ -131,6 +132,7 @@ export const App = () => {
         <Route path="/collection/:id" Component={Collection}/>
         <Route path="/mycards" element={<MyCards wallet={wallet}></MyCards>}/>
         <Route path="/achat" element={<Achat wallet={wallet}></Achat>}/>
+        <Route path="/collections" element={<Collections wallet={wallet}></Collections>}/>
       </Routes>
     </Router>
 

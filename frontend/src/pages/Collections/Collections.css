@@ -1,0 +1,55 @@
+h1{
+    color: #c9d1d9;
+    margin-bottom: 1.5rem;
+    font-weight : 600;
+    line-height : normal;
+    position : relative;
+    text-align: center; 
+    text-decoration: underline; 
+
+}
+
+p{
+    color: #c9d1d9;
+    margin-bottom: 1.5rem;
+    font-weight : 600;
+    line-height : normal;
+    position : relative;
+    text-align: center; 
+}
+
+.collections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.collectionsLogo {
+    background-color: #252f3f;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem 1.5rem;
+    height: 250px; 
+    width: 250px; 
+    cursor: pointer;
+}
+
+
+.collectionsLogo img {
+    max-width: 75%; 
+    max-height: 75%; 
+}
+
+.NomCollec{
+    color: #c9d1d9;
+    margin-bottom: 1.5rem;
+    font-weight : 600;
+    line-height : normal;
+    position : relative;
+    margin-top : 1.5rem;
+    text-align: center; 
+}

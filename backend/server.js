@@ -10,7 +10,6 @@ const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
 
 /* ---------------------------------------------------------------------- */
 
-// const metaDataSet = require('../frontend/src/metaDataSet.json')
 const metaDataSet = require("../db/collections.json")
 
 /* ---------------------------------------------------------------------- */
@@ -51,6 +50,21 @@ app.get('/collection', (req,res) => {
         cartes.push(carte)
     }
     res.json(cartes)
+})
+
+app.get("/collectionsData", (req,res) => {
+    let collections = []
+    for(var i = 0 ; i < metaDataSet.data.length ; i++){
+        const collection = {
+            symbol: metaDataSet.data[i].images.symbol,
+            logo: metaDataSet.data[i].images.logo,
+            name : metaDataSet.data[i].name,
+            id : metaDataSet.data[i].id,
+            serie : metaDataSet.data[i].series
+        }
+        collections.push(collection)
+    }
+    res.json(collections)
 })
 
 app.get('/booster', (req,res)=>{

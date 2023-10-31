@@ -1,0 +1,14 @@
+.selector-button{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.selector{
+    margin: 1rem;
+    width: 30rem;
+}
+
+.selector-button button{
+    margin: 1rem;
+}

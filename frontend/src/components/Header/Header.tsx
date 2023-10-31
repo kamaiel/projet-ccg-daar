@@ -16,9 +16,11 @@ export const Header = () => {
                 </NavLink>
             </div>
             <div className="navigation">
-                <button className="deck">
-                    Collections
-                </button>
+                <Link to={"/collections"}>
+                    <button className="deck">
+                        Collections
+                    </button>
+                </Link>
                 <Link to={"/mycards"}>
                     <button className="myCards">
                         Mes cartes
