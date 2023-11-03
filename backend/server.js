@@ -54,16 +54,22 @@ app.get('/collection', (req,res) => {
 })
 
 app.get("/collectionsData", (req,res) => {
+    const collToReturn = req.query.collections.split(",")
+    console.log(collToReturn)
     let collections = []
     for(var i = 0 ; i < metaDataSet.data.length ; i++){
-        const collection = {
-            symbol: metaDataSet.data[i].images.symbol,
-            logo: metaDataSet.data[i].images.logo,
-            name : metaDataSet.data[i].name,
-            id : metaDataSet.data[i].id,
-            serie : metaDataSet.data[i].series
+        for(var j = 0 ; j < collToReturn.length ; j++){
+            if(collToReturn[j] == metaDataSet.data[i].id){
+                const collection = {
+                    symbol: metaDataSet.data[i].images.symbol,
+                    logo: metaDataSet.data[i].images.logo,
+                    name : metaDataSet.data[i].name,
+                    id : metaDataSet.data[i].id,
+                    serie : metaDataSet.data[i].series
+                }
+                collections.push(collection)
+            }
         }
-        collections.push(collection)
     }
     res.json(collections)
 })
@@ -88,7 +94,7 @@ app.get('/booster', (req,res)=>{
         }
         cards.push(carte)
     }
-
+    
   res.json(cards)
 })
 

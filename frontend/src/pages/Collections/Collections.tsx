@@ -9,14 +9,17 @@ export const Collections = ({ wallet }) => {
     const [loading, setLoading] = useState(true);
 
     const fetchCollectionsData = async () => {
-        const response = await fetch(`http://127.0.0.1:3000/collectionsData`).then((response) => {return response.json()});
-        setImgCollections(response.sort((a,b) => a.name.localeCompare(b.name)));
-        setLoading(false);
+        const collections = await wallet?.contract.getAllCollectionsName().then((res:any) => {return res});
+        if(collections!=undefined){
+            const response = await fetch(`http://127.0.0.1:3000/collectionsData?collections=${collections}`).then((response) => {return response.json()});
+            setImgCollections(response.sort((a,b) => a.name.localeCompare(b.name)));
+            setLoading(false);
+        }
     }
 
     useEffect(() => {
         fetchCollectionsData();
-    }, []);
+    }, [wallet]);
 
     return (
         <div>

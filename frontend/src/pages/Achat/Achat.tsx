@@ -3,9 +3,6 @@ import { Cards } from "@/components/Cards/Cards"
 import Select from "react-select"
 import "./Achat.css"
 
-const encryptionKey = "c1290ef69d0aa16230a7965d2c23cbabb26c4b8bbee90587ff8078008fe68a1a";
-
-
 export const Achat = ({wallet}) => {
 
     const [boosteredCards, setBoosteredCards] = useState([])
@@ -40,11 +37,15 @@ export const Achat = ({wallet}) => {
     }
 
     const fetchCollectionsData = async () => {
-        const response = await fetch(`http://127.0.0.1:3000/collectionsData`).then((response) => {return response.json()});
-        setCollections(response);
-        setLoading(true);
+        const collections = await wallet?.contract.getAllCollectionsName().then((res:any) => {return res});
+        if(collections!=undefined){
+            const response = await fetch(`http://127.0.0.1:3000/collectionsData?collections=${collections}`).then((response) => {return response.json()});
+            setCollections(response.sort((a,b) => a.name.localeCompare(b.name)));
+            setLoading(true);
+        }
     }
 
+    
     useEffect(() => { 
         fetchCollectionsData();
         if(loading){
