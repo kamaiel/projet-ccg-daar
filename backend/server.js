@@ -4,8 +4,9 @@ const axios = require('axios')
 const app = express()
 const cors = require('cors')
 const port = 3000 
-const API_key = "43aadbec-ef33-49cb-abcc-1a3810dd598f"
-const crypto = require('crypto');
+const cryptoJs = require('crypto-js');
+require('dotenv').config();
+const encryptionKey = process.env.ENCRYPTION_KEY;
 
 /* ---------------------------------------------------------------------- */
 
@@ -55,7 +56,6 @@ app.get('/collection', (req,res) => {
 
 app.get("/collectionsData", (req,res) => {
     const collToReturn = req.query.collections.split(",")
-    console.log(collToReturn)
     let collections = []
     for(var i = 0 ; i < metaDataSet.data.length ; i++){
         for(var j = 0 ; j < collToReturn.length ; j++){
@@ -94,8 +94,11 @@ app.get('/booster', (req,res)=>{
         }
         cards.push(carte)
     }
+
+    let encryptedData = cryptoJs.AES.encrypt(JSON.stringify(cards), encryptionKey).toString();
     
-  res.json(cards)
+    res.json(encryptedData);
+    
 })
 
 

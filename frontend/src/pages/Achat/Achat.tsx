@@ -2,6 +2,8 @@ import {useEffect, useState} from "react"
 import { Cards } from "@/components/Cards/Cards"
 import Select from "react-select"
 import "./Achat.css"
+import * as crypto from "crypto-js";
+const encryptionKey = "fe97dc1396947d4ee2461e169d4a8b2d73f6aef1b15f5972099716ab5e01f73a";
 
 export const Achat = ({wallet}) => {
 
@@ -27,12 +29,16 @@ export const Achat = ({wallet}) => {
       }
 
     const getRandomCard = async (collectionId:string) => {
-        console.log(collectionId)
         setIsMinted(false)
         const response = await fetch(`http://127.0.0.1:3000/booster?id=${collectionId}`).then((response) => {
             return response.json()
         })
-        setBoosteredCards(response)
+        
+        //Decrypting the response
+        const bytes = crypto.AES.decrypt(response, encryptionKey);
+        const decryptedData = JSON.parse(bytes.toString(crypto.enc.Utf8));
+
+        setBoosteredCards(decryptedData)
         setIsOpen(true)
     }
 
@@ -45,7 +51,7 @@ export const Achat = ({wallet}) => {
         }
     }
 
-    
+
     useEffect(() => { 
         fetchCollectionsData();
         if(loading){
@@ -55,7 +61,7 @@ export const Achat = ({wallet}) => {
             }
             setOptions(options.sort((a,b) => a.label.localeCompare(b.label)))
         }
-    }, [loading])
+    }, [wallet,loading])
 
     useEffect(()=>{
         if(isOpen && selectValue){
