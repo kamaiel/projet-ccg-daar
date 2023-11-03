@@ -31,6 +31,11 @@ export const Header = () => {
                         Achat 
                     </button>
                 </Link>
+                <Link to={"/market"}>
+                    <button className="market">
+                        Marché 
+                    </button>
+                </Link>
             </div>
             <div className="profile">
                 <button className="Account"> Profil </button>

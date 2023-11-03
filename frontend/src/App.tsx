@@ -11,6 +11,7 @@ import {Header} from './components/Header/Header'
 import {Accueil} from './pages/Accueil/Accueil'
 import {Achat} from './pages/Achat/Achat'
 import {Collections} from './pages/Collections/Collections'
+import {Market} from './pages/Market/Market'
 
 
 //simport {CollectionCard} from './components/CollectionCard/CollectionCard'
@@ -133,6 +134,7 @@ export const App = () => {
         <Route path="/mycards" element={<MyCards wallet={wallet}></MyCards>}/>
         <Route path="/achat" element={<Achat wallet={wallet}></Achat>}/>
         <Route path="/collections" element={<Collections wallet={wallet}></Collections>}/>
+        <Route path="/market" element={<Market wallet={wallet}></Market>}/>
       </Routes>
     </Router>
 
