@@ -22,8 +22,7 @@ export const Achat = ({wallet}) => {
     const encodeURICard = (cards : any) : string[]=>{
         var mintedCardURIs = [];
         for (const card of cards) {
-          const cardURI : string = JSON.stringify(card.id)
-          mintedCardURIs.push(cardURI);
+          mintedCardURIs.push(card.id);
         }
         return mintedCardURIs
       }

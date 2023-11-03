@@ -1,5 +1,5 @@
+import React from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react'
-import styles from './styles.module.css'
 import * as ethereum from '@/lib/ethereum'
 import * as main from '@/lib/main'
 import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
@@ -14,7 +14,6 @@ import {Collections} from './pages/Collections/Collections'
 import {Market} from './pages/Market/Market'
 
 
-//simport {CollectionCard} from './components/CollectionCard/CollectionCard'
 
 
 type Canceler = () => void
@@ -129,7 +128,7 @@ export const App = () => {
     <Router> 
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Accueil wallet={wallet}></Accueil>}/>
+        <Route path="/" element={<Accueil wallet={wallet}/>}></Route>
         <Route path="/collection/:id" Component={Collection}/>
         <Route path="/mycards" element={<MyCards wallet={wallet}></MyCards>}/>
         <Route path="/achat" element={<Achat wallet={wallet}></Achat>}/>

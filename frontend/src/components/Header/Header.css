@@ -42,7 +42,7 @@
 .navigation button{
     font-family: inherit;
     font-size : 16px;
-    height : inherit;
+    height : 4rem;
     border: none;
     color: white;
     width: 8rem;

@@ -1,4 +1,3 @@
-
 const express = require('express')
 const axios = require('axios')
 const app = express()
@@ -131,8 +130,25 @@ app.get('/booster', (req,res)=>{
 
 
 app.get('/id', (req,res) => {
-    const id = req.query
-    res.json(id)
+    const myNFT = req.query.myNFT.split(",")
+    var cards = []
+
+    if (req.query.myNFT != "nothing"){
+        const idCollec = myNFT[0].split("-")
+        const collectionCards = require("../db/"+idCollec[0]+"-cards.json")  
+
+        for(var i = 0 ; i < myNFT.length ; i++){
+            const cardInfo= collectionCards.data.find(item => item.id === myNFT[i]);
+            const card = {
+                link : cardInfo.images.small,
+                linkBig : cardInfo.images.large,
+                name : cardInfo.name,
+                id : cardInfo.id
+            }
+            cards.push(card)
+        }
+    }
+    res.json(cards)
 })
 
 

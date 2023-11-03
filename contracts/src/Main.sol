@@ -22,8 +22,8 @@ contract Main {
 
     function createCollection(string calldata name, uint cardCount) external onlyOwner returns (Collection) {
       Collection newCollection = new Collection(name, cardCount);
-      collections[collectionCount++] = newCollection;
       collectionNameToId[name] = collectionCount;
+      collections[collectionCount++] = newCollection;
       return newCollection;
     }
 
@@ -45,13 +45,13 @@ contract Main {
 
      function getNFT(string memory _collectionName, address _owner) external view returns (string[] memory) {
         int _collectionId = collectionNameToId[_collectionName];
-        require(_collectionId < collectionCount, "Invalid collection ID");
+        require(_collectionId < collectionCount, "Invalid collection ID getNFT");
         Collection c = collections[_collectionId];
         return c.getNFTOwner(_owner);
     }
 
     function assignCard(int collectionId, address to, uint tokenId) external onlyOwner {
-        require(collectionId < collectionCount, "Invalid collection ID");
+        require(collectionId < collectionCount, "Invalid collection ID assignCard");
         Collection collection = collections[collectionId];
         collection.safeTransferFrom(address(this), to, tokenId);
     }

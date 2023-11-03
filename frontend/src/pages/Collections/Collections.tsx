@@ -33,8 +33,7 @@ export const Collections = ({ wallet }) => {
                             name : item.name,
                             id : item.id,
                             series : item.serie}}>
-                                <div className = "collectionsLogo" key={index}>
-                                    
+                                <div className = "collectionsLogo" key={index}>    
                                     <img key={index} src={item.logo} />
                                     <div className="NomCollec">
                                         {`Collection : ${item.name}`}

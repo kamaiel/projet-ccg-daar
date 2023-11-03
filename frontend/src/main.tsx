@@ -1,12 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { App } from './App'
-import { Collection } from './pages/Collection/Collection'
-import {MyCards} from './pages/MyCards/MyCards'
-import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
-import { Header } from './components/Header/Header'
-
-
+import { Accueil } from './pages/Accueil/Accueil'
 
 const node = document.getElementById('root') as HTMLElement
 const root = ReactDOM.createRoot(node)
@@ -14,8 +9,9 @@ const root = ReactDOM.createRoot(node)
 
 root.render(
   <React.StrictMode>
-    <App></App>
-  </React.StrictMode>
+    <App/>
+  </React.StrictMode>,
+  
 )
 function createBrowserRouter(arg0: never[]) {
   throw new Error('Function not implemented.')
