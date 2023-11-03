@@ -37,9 +37,6 @@ export const Header = () => {
                     </button>
                 </Link>
             </div>
-            <div className="profile">
-                <button className="Account"> Profil </button>
-            </div>
         </div>
     )
 }

@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.logo, .profile, .navigation, .name{
+.logo, .navigation, .name{
     height: inherit;  
     background-color: #161b22;
     color: white;
@@ -28,15 +28,9 @@
     font-weight : bold;
     
 }
-
-.profile{
-    margin-left: px;
-}
-
 .navigation{
     margin-left: auto;
     padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .navigation button{
@@ -53,20 +47,6 @@
     cursor: pointer;
 }
 
-.profile button{
-    font-family: inherit;
-    font-size : 16px;
-    border: none;
-    height : inherit;
-    color: white;
-    width: 8rem;
-    padding: 1.5rem;
-    margin-left: 0.5rem;
-    border-radius: inherit;
-    background-color: #161b22;
-    text-align: center;
-    cursor: pointer;
-}
 
 .name button{
     font-size : 16px;
@@ -74,7 +54,6 @@
     border: none;
     color: white;
     width: 8rem;
-    padding: inherit;
     background-color: #161b22;
     text-align: center;
     cursor: pointer;
@@ -86,9 +65,6 @@
 
 }
 
-.profile button:hover{
-    background: black;
-}
 
 .name button:hover{
     color: cyan;

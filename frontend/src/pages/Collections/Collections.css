@@ -9,16 +9,56 @@ h1{
 
 }
 
-p{
+.NomCollec{
     color: #c9d1d9;
     margin-bottom: 1.5rem;
     font-weight : 600;
     line-height : normal;
     position : relative;
+    margin-top : 1.5rem;
     text-align: center; 
+    text-decoration: underline;
 }
 
-.collections {
+
+.collectionsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.logoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.collectionsLogo {
+    background-color: #252f3f;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem 1.5rem;
+    height: 250px; 
+    width: 250px; 
+    cursor: pointer;
+}
+
+.collectionsLogo:hover{
+    transform : scale(1.05)
+}
+
+.collectionsLogo img {
+    width: 75%;
+    height: 40;
+    object-fit: cover;
+}
+
+
+/*.collectionsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -42,14 +82,4 @@ p{
 .collectionsLogo img {
     max-width: 75%; 
     max-height: 75%; 
-}
-
-.NomCollec{
-    color: #c9d1d9;
-    margin-bottom: 1.5rem;
-    font-weight : 600;
-    line-height : normal;
-    position : relative;
-    margin-top : 1.5rem;
-    text-align: center; 
-}
+}*/

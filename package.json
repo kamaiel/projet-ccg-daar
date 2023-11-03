@@ -11,12 +11,14 @@
   },
   "devDependencies": {
     "concurrently": "^7.5.0",
-    "hardhat": "^2.18.2"
+    "hardhat": "^2.18.2",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@openzeppelin/contracts": "4.9.3",
     "crypto": "^1.0.1",
     "crypto-js": "^4.2.0",
+    "dotenv": "^16.3.1",
     "react-router-dom": "^6.17.0",
     "react-select": "^5.7.7"
   }

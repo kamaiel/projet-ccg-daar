@@ -21,11 +21,16 @@ contract Main {
     }
 
     function createCollection(string calldata name, uint cardCount) external onlyOwner returns (Collection) {
+      int collectionId = collectionCount; 
+      collectionCount++; 
+
       Collection newCollection = new Collection(name, cardCount);
-      collections[collectionCount++] = newCollection;
-      collectionNameToId[name] = collectionCount;
-      return newCollection;
-    }
+      collections[collectionId] = newCollection; 
+      collectionNameToId[name] = collectionId; 
+
+     return newCollection;
+}
+
 
     function mintCards(string memory collectionName, address to, string[] memory cardURIs) external{
         int collectionId = collectionNameToId[collectionName];
@@ -45,7 +50,7 @@ contract Main {
 
      function getNFT(string memory _collectionName, address _owner) external view returns (string[] memory) {
         int _collectionId = collectionNameToId[_collectionName];
-        require(_collectionId < collectionCount, "Invalid collection ID");
+        require(_collectionId <= collectionCount, "Invalid collection ID");
         Collection c = collections[_collectionId];
         return c.getNFTOwner(_owner);
     }

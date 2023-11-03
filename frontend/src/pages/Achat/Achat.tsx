@@ -34,10 +34,10 @@ export const Achat = ({wallet}) => {
         })
         
         //Decrypting the response
-        const bytes = crypto.AES.decrypt(response, encryptionKey);
-        const decryptedData = JSON.parse(bytes.toString(crypto.enc.Utf8));
+        //const bytes = crypto.AES.decrypt(response, encryptionKey);
+        //const decryptedData = JSON.parse(bytes.toString(crypto.enc.Utf8));
 
-        setBoosteredCards(decryptedData)
+        setBoosteredCards(response)
         setIsOpen(true)
     }
 
@@ -66,7 +66,7 @@ export const Achat = ({wallet}) => {
         if(isOpen && selectValue){
             const c : string[] = encodeURICard(boosteredCards)
             wallet?.contract.mintCards(selectValue.value, wallet?.details.account,c)
-            .then(()=>setIsMinted(true))
+            .then(()=> setIsMinted(true))
             .catch((error: any)=> {
                 setIsOpen(false)
                 console.error("Erreur lors de l'appel à la fonction mintCards en ouvrant un booster :", error);

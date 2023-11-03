@@ -74,7 +74,6 @@ app.get("/collectionsData", (req,res) => {
 })
 
 app.get('/booster', (req,res)=>{
-
     const collectionId = req.query.id
     const collectionCards = require("../db/"+collectionId+"-cards.json")
     var cardsIndex = []
@@ -93,10 +92,9 @@ app.get('/booster', (req,res)=>{
         }
         cards.push(carte)
     }
-
-    let encryptedData = cryptoJs.AES.encrypt(JSON.stringify(cards), encryptionKey).toString();
     
-    res.json(encryptedData);
+    //let encryptedData = cryptoJs.AES.encrypt(JSON.stringify(cards), encryptionKey).toString();
+    res.json(cards);
     
 })
 
@@ -130,20 +128,23 @@ app.get('/booster', (req,res)=>{
 
 
 app.get('/id', (req,res) => {
-    const myNFT = req.query.myNFT.split(",")
+    var myNFT = req.query.myNFT.split(",")
+    myNFT = myNFT.filter(item => item !== '');
     var cards = []
 
     if (req.query.myNFT != "nothing"){
-        const idCollec = myNFT[0].split("-")
-        const collectionCards = require("../db/"+idCollec[0]+"-cards.json")  
-
         for(var i = 0 ; i < myNFT.length ; i++){
+            const idCollec = myNFT[i].split("-")
+            const collectionCards = require("../db/"+idCollec[0]+"-cards.json")  
             const cardInfo= collectionCards.data.find(item => item.id === myNFT[i]);
+            const collection = metaDataSet.data.find(item => item.id === idCollec[0]);
+
             const card = {
                 link : cardInfo.images.small,
                 linkBig : cardInfo.images.large,
                 name : cardInfo.name,
-                id : cardInfo.id
+                id : cardInfo.id,
+                collection : collection.series + ' : ' + collection.name
             }
             cards.push(card)
         }

@@ -5,10 +5,7 @@
     align-items: center;
 }
 
-
-
 .cartes img{
     filter: brightness(0.2); 
     margin: 0 1rem 1.5rem;
-    
 }

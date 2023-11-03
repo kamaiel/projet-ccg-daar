@@ -1,4 +1,4 @@
-import { SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
+import { Key, SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
 import "./Collections.css"
 import { Link } from 'react-router-dom';
 import {Collection} from '../Collection/Collection'
@@ -21,28 +21,43 @@ export const Collections = ({ wallet }) => {
         fetchCollectionsData();
     }, [wallet]);
 
+    const organizedLogo : any  = {};
+    imgCollections.forEach((logo) => {
+        if (!organizedLogo[logo.serie]) {
+            organizedLogo[logo.serie] = [];
+        }
+        organizedLogo[logo.serie].push(logo);
+    });
+
     return (
         <div>
             <h1>Collections existantes dans la blockchain</h1>
-            {!wallet && <p>Veuillez vous connecter à votre compte metamask...</p>}
+            {!wallet && <p>Veuillez vous connecter à votre compte MetaMask...</p>}
             {loading && wallet && <p>Chargement en cours...</p>}
             {!loading && (
-                <ul className="collections">
-                    {imgCollections.map((item : any, index : any) => (
-                        <Link to={`/collection/${item.id}`} state={{
-                            name : item.name,
-                            id : item.id,
-                            series : item.serie}}>
-                                <div className = "collectionsLogo" key={index}>    
-                                    <img key={index} src={item.logo} />
-                                    <div className="NomCollec">
-                                        {`Collection : ${item.name}`}
+                <div className="collectionsContainer">
+                    {Object.keys(organizedLogo).map((serie, index) => (
+                        <div className="serieContainer" key={index}>
+                            <h2>{`Série : ${serie}`}</h2>
+                            <div className="logoContainer">
+                                {organizedLogo[serie].map((logo: { logo: string | undefined; }, logoIndex: Key | null | undefined) => (
+                                    <Link to={`/collection/${logo.id}`} state={{
+                                        name : logo.name,
+                                        id : logo.id,
+                                        series : logo.serie}}>
+                                    <div className="collectionsLogo" key={logoIndex}>
+                                        <img src={logo.logo} alt={`Logo de la série ${serie}`} />
+                                        <div className="NomCollec">
+                                            {`Collection : ${logo.name}`}
+                                         </div>
                                     </div>
-                                </div>   
-                        </Link>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
                     ))}
-                </ul>
+                </div>
             )}
         </div>
     );
-};
+}

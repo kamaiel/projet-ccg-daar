@@ -1,55 +1,16 @@
-h1{
-    color: #c9d1d9;
-    margin-bottom: 1.5rem;
-    font-weight : 600;
-    line-height : normal;
-    position : relative;
-    text-align: center; 
-    text-decoration: underline; 
-
-}
-
-p{
-    color: #c9d1d9;
-    margin-bottom: 1.5rem;
-    font-weight : 600;
-    line-height : normal;
-    position : relative;
-    text-align: center; 
-}
-
-.collections {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.collectionsLogo {
-    background-color: #252f3f;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem 1.5rem;
-    height: 250px; 
-    width: 250px; 
-    cursor: pointer;
+.Fond {
+    position: fixed;
+    top : 20%;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Placez le fond en arrière-plan */
 }
 
 
-.collectionsLogo img {
-    max-width: 100%; /* La largeur de l'image ne dépassera pas la largeur du parent */
-    max-height: 100%; /* La hauteur de l'image ne dépassera pas la hauteur du parent */
-}
-
-.NomCollec{
-    color: #c9d1d9;
-    margin-bottom: 1.5rem;
-    font-weight : 600;
-    line-height : normal;
-    position : relative;
-    margin-top : 1.5rem;
-    text-align: center; 
+.Fond img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover; /* Assurez-vous que l'image couvre toute la zone sans déformation */
 }

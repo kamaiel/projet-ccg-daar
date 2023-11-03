@@ -6,3 +6,14 @@
     overflow : scroll;
     height: 100vh;
 }
+
+h2{
+    color: #c9d1d9;
+    margin-bottom: 1.5rem;
+    font-weight : 600;
+    line-height : normal;
+    position : relative;
+    text-align: center; 
+    text-decoration: underline; 
+
+}
