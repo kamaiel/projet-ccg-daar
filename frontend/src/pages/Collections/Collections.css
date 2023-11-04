@@ -9,6 +9,15 @@ h1{
 
 }
 
+p{
+    color: #c9d1d9;
+    margin-bottom: 1.5rem;
+    font-weight : 600;
+    line-height : normal;
+    position : relative;
+    text-align: center; 
+}
+
 .NomCollec{
     color: #c9d1d9;
     margin-bottom: 1.5rem;

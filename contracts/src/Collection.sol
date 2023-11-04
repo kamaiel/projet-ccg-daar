@@ -11,6 +11,16 @@ contract Collection is ERC721URIStorage{
 
     mapping(uint256 => address) private _tokenURIs;
 
+     struct Vente {
+        address seller;
+        uint price;
+        bool active;
+    }
+
+    mapping(uint => Vente) private tokenIdToSale;
+    uint nbVentes;
+
+
 
     constructor(string memory _collectionName,uint _cardCount) ERC721("Collection", "POK") {
         collectionName = _collectionName;
@@ -41,8 +51,30 @@ contract Collection is ERC721URIStorage{
         return collectionName;
     }
 
+    function buyNFT(uint tokenId) external payable {
+        require(tokenIdToSale[tokenId].active, "NFT pas dans la liste des ventes");
+        uint price = tokenIdToSale[tokenId].price;
+        require(msg.value >= price, "Argent dans le wallet insuffisant");
 
+        address seller = tokenIdToSale[tokenId].seller;
+        payable(seller).transfer(msg.value);
 
+        safeTransferFrom(address(this), msg.sender, tokenId);
 
+        tokenIdToSale[tokenId].active = false;
+    }
+
+    function createSale(uint tokenId, uint price) external {
+        require(ownerOf(tokenId) == msg.sender, "Pas l'owner du NFT");
+        require(!tokenIdToSale[tokenId].active, "NFT deja en ventes");
+
+        tokenIdToSale[tokenId] = Vente({
+            seller: msg.sender,
+            price: price,
+            active: true
+        });
+        nbVentes++;
+    }
+    
     
 }
