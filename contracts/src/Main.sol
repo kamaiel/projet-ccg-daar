@@ -48,29 +48,43 @@ contract Main {
         return int(c.balanceOf(_owner));
     }
 
-     function getNFT(string memory _collectionName, address _owner) external view returns (string[] memory) {
+    function getNFT(string memory _collectionName, address _owner) external view returns (string[] memory,uint[] memory) {
         int _collectionId = collectionNameToId[_collectionName];
         require(_collectionId <= collectionCount, "Invalid collection ID");
         Collection c = collections[_collectionId];
         return c.getNFTOwner(_owner);
     }
+    
+    function sellNFT(string memory _collectionName, address _owner, uint tokenId, uint price) external {
+      int _collectionId = collectionNameToId[_collectionName];
+      require(_collectionId <= collectionCount, "Invalid collection ID");
+      Collection c = collections[_collectionId];
+      c.createSale(_owner, tokenId, price);
+    }
 
-    function assignCard(int collectionId, address to, uint tokenId) external onlyOwner {
-        require(collectionId < collectionCount, "Invalid collection ID");
-        Collection collection = collections[collectionId];
-        collection.safeTransferFrom(address(this), to, tokenId);
+    function buyNFT(address _owner, string memory _collectionName, uint tokenId) external payable {
+      int _collectionId = collectionNameToId[_collectionName];
+      require(_collectionId <= collectionCount, "Invalid collection ID");
+      Collection c = collections[_collectionId];    
+      c.buyNFT(_owner, tokenId);
+    }
+
+
+    function getAllNftInSales() external view returns (int[][] memory, string[][] memory, int[][] memory){
+        int[][] memory tokens = new int[][](uint(collectionCount));
+        string[][] memory uris = new string[][](uint(collectionCount));
+        int[][] memory prix = new int[][](uint(collectionCount));
+
+        for(int i = 0 ; i < collectionCount ; i++){
+          Collection collection = collections[i];
+          (tokens[uint(i)], uris[uint(i)], prix[uint(i)]) = collection.getNFTSales();
+
+        }
+        return (tokens,uris, prix);
     }
 
     // Getters // 
-
-    function getCollection(uint _collec) external view returns (Collection){
-      return collections[int(_collec)];
-    }
-
-    function getCollectionCount() public view returns (int) {
-      return collectionCount;
-    }
-
+ 
     function getAllCollectionsName() public view returns (string[] memory) {
       string[] memory names = new string[](uint(collectionCount));
       for (uint i = 0; i < uint(collectionCount); i++) {

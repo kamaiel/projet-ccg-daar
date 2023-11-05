@@ -15,6 +15,8 @@ contract Collection is ERC721URIStorage{
         address seller;
         uint price;
         bool active;
+        string uri;
+        uint number;
     }
 
     mapping(uint => Vente) private tokenIdToSale;
@@ -35,45 +37,64 @@ contract Collection is ERC721URIStorage{
         _tokenURIs[tokenId] = to;
     }  
 
-    function getNFTOwner(address _owner) external view returns (string[] memory) {
-        string[] memory resp = new string[](balanceOf(_owner));
+    function getNFTOwner(address _owner) external view returns (string[] memory,uint[] memory) {
+        uint total = balanceOf(_owner);
+        string[] memory resp = new string[](total);
+        uint[] memory token = new uint[](total);
         uint256 tokenIndex = 0;
 
         for(uint i = 0 ; i < tokenIdCounter ; i++){
             if (_owner == ownerOf(i)){
-                resp[tokenIndex++] = tokenURI(i);
+                resp[tokenIndex] = tokenURI(i);
+                token[tokenIndex] = i;
+                tokenIndex++;
             }
         }
-        return resp;
+        return (resp,token);
     }
 
     function getName() public view returns (string memory){
         return collectionName;
     }
 
-    function buyNFT(uint tokenId) external payable {
+    function buyNFT(address _owner, uint tokenId) external payable {
         require(tokenIdToSale[tokenId].active, "NFT pas dans la liste des ventes");
-        uint price = tokenIdToSale[tokenId].price;
-        require(msg.value >= price, "Argent dans le wallet insuffisant");
-
         address seller = tokenIdToSale[tokenId].seller;
-        payable(seller).transfer(msg.value);
-
-        safeTransferFrom(address(this), msg.sender, tokenId);
-
+        _transfer(seller, _owner, tokenId);
         tokenIdToSale[tokenId].active = false;
+        nbVentes--;
     }
 
-    function createSale(uint tokenId, uint price) external {
-        require(ownerOf(tokenId) == msg.sender, "Pas l'owner du NFT");
+    function createSale(address _owner, uint tokenId, uint price) external {
+        require(ownerOf(tokenId) == _owner, "Pas l'owner du NFT");
         require(!tokenIdToSale[tokenId].active, "NFT deja en ventes");
 
         tokenIdToSale[tokenId] = Vente({
-            seller: msg.sender,
+            seller: _owner,
             price: price,
-            active: true
+            active: true,
+            uri : tokenURI(tokenId),
+            number : tokenId
         });
         nbVentes++;
+    }
+
+
+    function getNFTSales() external view returns (int[] memory, string[] memory, int[] memory){
+        int[] memory tokens = new int[](nbVentes);
+        string[] memory uris = new string[](nbVentes);
+        int[] memory prix = new int[](nbVentes);
+        uint count = 0 ;
+        for(uint i = 0 ; i < tokenIdCounter ; i++){
+            if(tokenIdToSale[i].active){
+                tokens[count] = int(tokenIdToSale[i].number);
+                uris[count] = tokenIdToSale[i].uri;
+                prix[count] = int(tokenIdToSale[i].price);
+                count++;
+            }
+        }
+
+        return (tokens,uris, prix);
     }
     
     

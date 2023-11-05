@@ -129,22 +129,28 @@ app.get('/booster', (req,res)=>{
 
 app.get('/id', (req,res) => {
     var myNFT = req.query.myNFT.split(",")
-    myNFT = myNFT.filter(item => item !== '');
+    var myTokensIDs = req.query.tokenIDs.split(",")
+    var prices = req.query.prices.split(",")
     var cards = []
-
-    if (req.query.myNFT != "nothing"){
+    if (myNFT[0] != ''){
         for(var i = 0 ; i < myNFT.length ; i++){
             const idCollec = myNFT[i].split("-")
             const collectionCards = require("../db/"+idCollec[0]+"-cards.json")  
             const cardInfo= collectionCards.data.find(item => item.id === myNFT[i]);
             const collection = metaDataSet.data.find(item => item.id === idCollec[0]);
+            var price = "none";
+            if (prices != 'none'){ price = prices[i]}
 
+            
             const card = {
                 link : cardInfo.images.small,
                 linkBig : cardInfo.images.large,
                 name : cardInfo.name,
                 id : cardInfo.id,
-                collection : collection.series + ' : ' + collection.name
+                collection : collection.series + ' : ' + collection.name,
+                collectionName : collection.name,
+                tokenId : myTokensIDs[i],
+                prix : price
             }
             cards.push(card)
         }

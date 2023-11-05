@@ -1,10 +1,11 @@
-import { SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
+import { SetStateAction, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import "./Accueil.css"
+import WalletContext from '@/WalletContext';
 
 
 
 
-export const Accueil = ({ wallet }) => {
+export const Accueil = () => {
     
     return (
         <><div>

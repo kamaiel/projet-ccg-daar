@@ -1,10 +1,13 @@
-import { Key, SetStateAction, useEffect, useMemo, useRef, useState } from 'react'
+import { Key, SetStateAction, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import "./Collections.css"
 import { Link } from 'react-router-dom';
 import {Collection} from '../Collection/Collection'
+import WalletContext from '@/WalletContext';
 
 
-export const Collections = ({ wallet }) => {
+export const Collections = () => {
+    const { useWallet } = useContext(WalletContext);
+    const wallet = useWallet();
     const [imgCollections, setImgCollections] = useState([]);
     const [loading, setLoading] = useState(true);
 

@@ -1,12 +1,14 @@
-import {useEffect, useState} from "react"
+import {useContext, useEffect, useState} from "react"
 import { Cards } from "@/components/Cards/Cards"
 import Select from "react-select"
 import "./Achat.css"
 import * as crypto from "crypto-js";
+import WalletContext from "@/WalletContext";
 const encryptionKey = "fe97dc1396947d4ee2461e169d4a8b2d73f6aef1b15f5972099716ab5e01f73a";
 
-export const Achat = ({wallet}) => {
-
+export const Achat = () => {
+    const { useWallet } = useContext(WalletContext);
+    const wallet = useWallet();
     const [boosteredCards, setBoosteredCards] = useState([])
     const [collections, setCollections] = useState([]);
     const [loading, setLoading] = useState(false);
