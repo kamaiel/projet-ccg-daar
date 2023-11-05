@@ -52,14 +52,14 @@ export const Cards = (props: any) => {
                 <div className="carte" key={card.id+card.tokenId}>
                     <img src={card.link} alt={"Carte"} style={{ filter: props.isPlayerCard && "brightness(1)" }} />
                     {props.button && props.wallet && (
-                        <button disabled={sellingStatus[card.id+card.tokenId]} onClick={() => mettreEnVente(card.collectionName, card.tokenId, card.id+card.tokenId)}>
+                        <button disabled={sellingStatus[card.id+card.tokenId]} onClick={() => mettreEnVente(card.collectionId, card.tokenId, card.id+card.tokenId)}>
                             {sellingStatus[card.id+card.tokenId] ? "Vente en cours ..." : "Mettre en vente"}
                         </button>
                     )}
                     {props.buttonAchat && props.wallet && (
                         <div>
                             <p>Prix : {card.prix} ETH</p>
-                            <button onClick={() => acheterCarte(card.collectionName, card.tokenId,card.id+card.tokenId)}>
+                            <button onClick={() => acheterCarte(card.collectionId, card.tokenId,card.id+card.tokenId)}>
                                 Acheter
                             </button>
                         </div>

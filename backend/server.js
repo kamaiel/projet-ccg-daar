@@ -149,6 +149,7 @@ app.get('/id', (req,res) => {
                 id : cardInfo.id,
                 collection : collection.series + ' : ' + collection.name,
                 collectionName : collection.name,
+                collectionId : collection.id,
                 tokenId : myTokensIDs[i],
                 prix : price
             }
